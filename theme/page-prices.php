@@ -35,12 +35,19 @@ get_header();
 
                 <div class="tab-panel" :class="{ 'active': activeTab === 0 }"
                     x-show.transition.in.opacity.duration.600="activeTab === 0">
-                    <?php
-            get_template_part( 'template-parts/content/pricse', 'dentistry' );
-			get_template_part( 'template-parts/content/pricse', 'cosmetology' );
-			get_template_part( 'template-parts/content/pricse', 'massage' );
-			get_template_part( 'template-parts/content/pricse', 'psychotherapy' );
-			?>
+                    <?php get_template_part( 'template-parts/content/pricse', 'dentistry' );?>
+                </div>
+                <div class="tab-panel" :class="{ 'active': activeTab === 1 }"
+                    x-show.transition.in.opacity.duration.600="activeTab === 1">
+                    <?php get_template_part( 'template-parts/content/pricse', 'cosmetology' ); ?>
+                </div>
+                <div class="tab-panel" :class="{ 'active': activeTab === 2 }"
+                    x-show.transition.in.opacity.duration.600="activeTab === 2">
+                    <?php get_template_part( 'template-parts/content/pricse', 'massage' ); ?>
+                </div>
+                <div class="tab-panel" :class="{ 'active': activeTab === 3 }"
+                    x-show.transition.in.opacity.duration.600="activeTab === 3">
+                    <?php get_template_part( 'template-parts/content/pricse', 'psychotherapy' ); ?>
                 </div>
             </div>
 

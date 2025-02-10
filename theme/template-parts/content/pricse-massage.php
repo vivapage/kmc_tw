@@ -8,7 +8,4 @@
  */
 
 ?>
-<div class="tab-panel" :class="{ 'active': activeTab === 2 }"
-    x-show.transition.in.opacity.duration.600="activeTab === 2">
-    <p>Масаж та реабілітація</p>
-</div>
+massege

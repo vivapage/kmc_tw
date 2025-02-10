@@ -8,7 +8,4 @@
  */
 
 ?>
-<div class="tab-panel" :class="{ 'active': activeTab === 3 }"
-    x-show.transition.in.opacity.duration.600="activeTab === 3">
-    <p>Психотерапія</p>
-</div>
+psyho
