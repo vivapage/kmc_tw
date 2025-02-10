@@ -1,0 +1,61 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ */
+
+/**
+ * This uses the background and foreground colors declared in the `theme.json`
+ * file and is applied both to the front end and in the block editor.
+ */
+body {
+	@apply bg-background text-foreground;
+}
+
+.block-menu ul {
+	list-style-type: none;
+	padding-inline-start: 0;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	line-height: .95rem;
+}
+
+a.wp-block-button__link, a:hover.wp-block-button__link {
+	@apply text-white;
+}
+.rank-math-breadcrumb p {
+	@apply mb-0;
+}
+
+.glsr-button {
+	@apply rounded-full text-white;
+}
+
+.acf-gallery {
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+	margin: var(--wp--preset--spacing--lg) auto;
+	max-width: var(--wp--style--global--content-size);
+}
+
+.acf-gallery a img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+.tab-control {
+	@apply text-primary text-xl;
+}
+.tab-control.active {
+	@apply text-green-block font-semibold;
+}
+
+.tab-control:first-child {
+	@apply ml-0;
+}
+
+[x-cloak] {
+	display: none !important;
+}
+.acc1.active {
+	@apply font-bold;
+}

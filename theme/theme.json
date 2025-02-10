@@ -1,0 +1,178 @@
+{
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"defaultPalette": false,
+			"gradients": [
+				{
+					"gradient": "linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 100%)",
+					"name": "White to White 50%",
+					"slug": "white-to-white-50"
+				}
+			],
+			"palette": [
+				{
+					"color": "#000000",
+					"name": "Black",
+					"slug": "black"
+				},
+				{
+					"color": "#ffffff",
+					"name": "White",
+					"slug": "white"
+				},
+				{
+					"color": "#ff966b",
+					"name": "Orange Block",
+					"slug": "orange-block"
+				},
+				{
+					"color": "#eb7f53",
+					"name": "Orange hover",
+					"slug": "orange-hover"
+				},
+				{
+					"color": "#a4d680",
+					"name": "Green block",
+					"slug": "green-block"
+				},
+				{
+					"color": "#c0d05b",
+					"name": "Green button",
+					"slug": "green-button"
+				},
+				{
+					"color": "#92a23e",
+					"name": "Green button hover",
+					"slug": "green-button-hover"
+				},
+				{
+					"color": "#f5f5f5",
+					"name": "Grey light ",
+					"slug": "grey-light "
+				},
+				{
+					"color": "#e5e5e5",
+					"name": "Grey light2 ",
+					"slug": "grey-light2 "
+				},
+				{
+					"color": "#a0a0a0",
+					"name": "Grey text ",
+					"slug": "grey-text "
+				},
+				{
+					"color": "#414141",
+					"name": "Grey bold ",
+					"slug": "grey-bold "
+				},
+				{
+					"slug": "foreground",
+					"color": "#a0a0a0",
+					"name": "Foreground"
+				},
+				{
+					"slug": "secondary",
+					"color": "#414141",
+					"name": "secondary"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "73rem",
+			"wideSize": "75rem"
+		},
+		"spacing": {
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Montserrat",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/montserrat/montserrat-400-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Montserrat",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/montserrat/montserrat-600-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Montserrat",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/montserrat/montserrat-700-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "Montserrat, sans-serif",
+					"name": "Montserrat",
+					"slug": "montserrat"
+				}
+			],
+			"fontSizes": []
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--grey-text )"
+		},
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--orange-hover)"
+				}
+			},
+			"caption": {
+				"color": {
+					"text": "var(--wp--preset--color--grey-bold )"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			},
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--grey-bold )"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--montserrat)",
+					"fontStyle": "normal",
+					"fontWeight": "600"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--grey-bold )"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--montserrat)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--montserrat)"
+		}
+	},
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+}
