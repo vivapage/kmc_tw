@@ -573,7 +573,7 @@
         <div @click="expanded !== 9 ? expanded = 9 : expanded = null" class="first-tab">
 
             <div class="flex flex-row justify-between pb-2">
-                <div class=flex items-center" x-bind:class="{ 'font-bold': expanded == 9 }">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 9 }">
                     Ортодонтія
                 </div>
                 <div class="flex flex-row items-center gap-10">
