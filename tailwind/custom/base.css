@@ -59,3 +59,23 @@ a.wp-block-button__link, a:hover.wp-block-button__link {
 .acc1.active {
 	@apply font-bold;
 }
+
+.wp-block-table.is-style-stripes {
+	width: 100%;
+}
+
+.first-tab {
+	@apply hover:bg-orange-block hover:text-white w-full cursor-pointer px-5 pt-3 pb-2 inline-block border-b border-gray-200;
+}
+
+.button-price {
+	@apply border border-gray-200 px-4 py-2 rounded-full bg-orange-block text-white;
+}
+
+.button-price a {
+	@apply hover:text-black text-white
+}
+
+.second-tab {
+	@apply w-full cursor-pointer px-5 py-3 border border-gray-200 mb-1 bg-gray-100 hover:bg-orange-block hover:text-white flex flex-row justify-between;
+}

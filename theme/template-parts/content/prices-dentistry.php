@@ -11,15 +11,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('prose prose-_tw'); ?>>
     <div x-data="{ expanded: null }" x-cloak class="my-4 mx-auto">
         <!-- Консультація, діагностика -->
-        <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-            class="acc1 w-full cursor-pointer px-5 py-3 inline-block">
+        <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
+            <div class="flex flex-row justify-between pb-2 ">
                 <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">
                     Консультація, діагностика
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/konsultacziya-diagnostyka/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -42,11 +41,10 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Консультація -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 border border-gray-200 mb-1 bg-gray-100 flex flex-row justify-between">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Консультація</div>
                     <div class="flex flex-row items-center gap-10">
-                        <div class="border border-gray-200 px-4 py-2 rounded-full bg-white">
+                        <div class="button-price">
                             <a href="/service/konsultacziya/" target="_self">
                                 Детальніше про послугу
                             </a>
@@ -62,53 +60,16 @@
                 </div>
 
                 <!-- Консультація 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
-                    <figure class="wp-block-table is-style-stripes">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Безкоштовна консультація лікаря-стоматолога (до 15 хв) </td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація лікаря-стоматолога</td>
-                                    <td>299</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація дитячого стоматолога з психологічною адаптацією дитини</td>
-                                    <td>549</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація стоматолога-ортопеда з плануванням конструкції протезування зубів
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація хірурга-імплантолога з аналізом КТ та складанням плану операції
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація хірурга-імплантолога з аналізом КТ та складанням плану операції
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація пародонтолога зі складанням пародонтальної карти</td>
-                                    <td>549</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </figure>
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-4">
+                    <?php priceList('konsultacziya')?>
                 </div>
 
                 <!-- Онлайн консультація -->
-                <div @click="expanded !== 2 ? expanded = 2 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 border border-gray-200 mb-1 bg-gray-100 flex flex-row justify-between">
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
                     <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 2 }">Онлайн консультація
                     </div>
                     <div class="flex flex-row items-center gap-10">
-                        <div class="border border-gray-200 px-4 py-2 rounded-full bg-white">
+                        <div class="button-price">
                             <a href="/service/onlajn-konsultacziya/" target="_self">
                                 Детальніше про послугу
                             </a>
@@ -124,51 +85,14 @@
 
                 <!-- Онлайн консультація 2 -->
                 <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
-                    <figure class="wp-block-table is-style-stripes">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Безкоштовна консультація лікаря-стоматолога (до 15 хв) </td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація лікаря-стоматолога</td>
-                                    <td>299</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація дитячого стоматолога з психологічною адаптацією дитини</td>
-                                    <td>549</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація стоматолога-ортопеда з плануванням конструкції протезування зубів
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація хірурга-імплантолога з аналізом КТ та складанням плану операції
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація хірурга-імплантолога з аналізом КТ та складанням плану операції
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація пародонтолога зі складанням пародонтальної карти</td>
-                                    <td>549</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </figure>
+                    <?php priceList('onlajn-konsultacziya')?>
                 </div>
 
                 <!-- Види діагностики -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 border border-gray-200 mb-1 bg-gray-100 flex flex-row justify-between">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 3 }">Види діагностики</div>
                     <div class="flex flex-row items-center gap-10">
-                        <div class="border border-gray-200 px-4 py-2 rounded-full bg-white">
+                        <div class="button-price">
                             <a href="/service/vydy-diagnostyky/" target="_self">
                                 Детальніше про послугу
                             </a>
@@ -184,57 +108,20 @@
 
                 <!-- Види діагностики 3 -->
                 <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
-                    <figure class="wp-block-table is-style-stripes">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Безкоштовна консультація лікаря-стоматолога (до 15 хв) </td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація лікаря-стоматолога</td>
-                                    <td>299</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація дитячого стоматолога з психологічною адаптацією дитини</td>
-                                    <td>549</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація стоматолога-ортопеда з плануванням конструкції протезування зубів
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація хірурга-імплантолога з аналізом КТ та складанням плану операції
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація хірурга-імплантолога з аналізом КТ та складанням плану операції
-                                    </td>
-                                    <td>399</td>
-                                </tr>
-                                <tr>
-                                    <td>Консультація пародонтолога зі складанням пародонтальної карти</td>
-                                    <td>549</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </figure>
+                    <?php priceList('vydy-diagnostyky')?>
                 </div>
             </div>
         </div>
 
         <!-- Дитяча стоматологія -->
-        <div @click="expanded !== 2 ? expanded = 2 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3 inline-block mt-1">
+        <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 2 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 2 }">
                     Дитяча стоматологія
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/stomatologiya-kiev-zoloti-vorota/dentistry-child-kyev/"
                             target="_self">
                             Детальніше про послугу
@@ -257,8 +144,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -275,8 +161,7 @@
                 </div>
 
                 <!-- Sub Toggle 2 -->
-                <div @click="expanded !== 2 ? expanded = 2 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
                     Sub Toggle 2
                 </div>
 
@@ -295,15 +180,14 @@
         </div>
 
         <!-- Лікування зубів -->
-        <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3  inline-block mt-1">
+        <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 3 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 3 }">
                     Лікування зубів
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/likuvannya-zubiv/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -325,8 +209,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -343,8 +226,7 @@
                 </div>
 
                 <!-- Sub Toggle 3 -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     Sub Toggle 3
                 </div>
 
@@ -363,15 +245,14 @@
         </div>
 
         <!-- Хірургічна стоматологія -->
-        <div @click="expanded !== 4 ? expanded = 4 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3  inline-block mt-1">
+        <div @click="expanded !== 4 ? expanded = 4 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 4 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 4 }">
                     Хірургічна стоматологія
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/hirurgiya/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -393,8 +274,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -411,8 +291,7 @@
                 </div>
 
                 <!-- Sub Toggle 3 -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     Sub Toggle 3
                 </div>
 
@@ -431,15 +310,14 @@
         </div>
 
         <!-- Імплантація зубів -->
-        <div @click="expanded !== 5 ? expanded = 5 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3  inline-block mt-1">
+        <div @click="expanded !== 5 ? expanded = 5 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 5 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 5 }">
                     Імплантація зубів
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/implantacziya-zybiv/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -461,8 +339,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -479,8 +356,7 @@
                 </div>
 
                 <!-- Sub Toggle 3 -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     Sub Toggle 3
                 </div>
 
@@ -499,15 +375,14 @@
         </div>
 
         <!-- Протезування зубів -->
-        <div @click="expanded !== 6 ? expanded = 6 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3  inline-block mt-1">
+        <div @click="expanded !== 6 ? expanded = 6 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 6 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 6 }">
                     Протезування зубів
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/protezuvannya-zubiv/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -529,8 +404,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -547,8 +421,7 @@
                 </div>
 
                 <!-- Sub Toggle 3 -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     Sub Toggle 3
                 </div>
 
@@ -567,15 +440,14 @@
         </div>
 
         <!-- Естетична стоматологія -->
-        <div @click="expanded !== 7 ? expanded = 7 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3  inline-block mt-1">
+        <div @click="expanded !== 7 ? expanded = 7 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 7 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 7 }">
                     Естетична стоматологія
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/estetychna-stomatologiya/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -597,8 +469,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -615,8 +486,7 @@
                 </div>
 
                 <!-- Sub Toggle 3 -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     Sub Toggle 3
                 </div>
 
@@ -635,15 +505,14 @@
         </div>
 
         <!-- Турбота про ясна -->
-        <div @click="expanded !== 8 ? expanded = 8 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3  inline-block mt-1">
+        <div @click="expanded !== 8 ? expanded = 8 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 8 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 8 }">
                     Турбота про ясна
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/turbota-pro-yasna/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -665,8 +534,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -683,8 +551,7 @@
                 </div>
 
                 <!-- Sub Toggle 3 -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     Sub Toggle 3
                 </div>
 
@@ -703,15 +570,14 @@
         </div>
 
         <!-- Ортодонтія -->
-        <div @click="expanded !== 9 ? expanded = 9 : expanded = null"
-            class="w-full cursor-pointer px-5 py-3  inline-block mt-1">
+        <div @click="expanded !== 9 ? expanded = 9 : expanded = null" class="first-tab">
 
-            <div class="flex flex-row justify-between pb-2 border-b border-gray-200">
-                <div class="" x-bind:class="{ 'font-bold': expanded == 9 }">
+            <div class="flex flex-row justify-between pb-2">
+                <div class=flex items-center" x-bind:class="{ 'font-bold': expanded == 9 }">
                     Ортодонтія
                 </div>
                 <div class="flex flex-row items-center gap-10">
-                    <div class="border border-gray-200 px-4 py-2 rounded-full bg-gray-100">
+                    <div class="button-price">
                         <a href="/service_category/dentistry/ortodontiya/" target="_self">
                             Детальніше про послугу
                         </a>
@@ -733,8 +599,7 @@
             <div x-data="{ expanded: null }">
 
                 <!-- Sub Toggle 1 -->
-                <div @click="expanded !== 1 ? expanded = 1 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3 text-center inline-block">
+                <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
                     Sub Toggle 1
                 </div>
 
@@ -751,8 +616,7 @@
                 </div>
 
                 <!-- Sub Toggle 3 -->
-                <div @click="expanded !== 3 ? expanded = 3 : expanded = null"
-                    class="w-full cursor-pointer px-5 py-3   text-center inline-block">
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
                     Sub Toggle 3
                 </div>
 
@@ -769,5 +633,7 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
     </div>
 </article>

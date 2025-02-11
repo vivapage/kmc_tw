@@ -215,3 +215,32 @@ function qorp_enqueue_thickbox() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'qorp_enqueue_thickbox' );
+
+function priceList($cat) {
+
+		$args = array(
+  		'post_type' => 'prices',
+		'posts_per_page' => -1,
+		'orderby'   => 'menu_order',
+        'order'     => 'DESC',
+);
+
+	$query = new WP_Query( $args );
+  echo '<figure class="wp-block-table is-style-stripes"><table><tbody>';
+if ( $query->have_posts() ) :
+  while ( $query->have_posts() ) : $query->the_post();
+	$custom_field = get_field( 'posluga');
+	//print_r ($custom_field);
+	if ($custom_field[0]->post_name == $cat ) :
+		echo '<tr><td>';
+		echo the_title();
+		echo '</td>';
+		echo '<td>';
+		echo get_field('cost');
+		echo '</td></tr>';
+		endif;
+  endwhile;
+endif;
+echo'</tbody></table></figure>';
+wp_reset_query( $query );
+}
