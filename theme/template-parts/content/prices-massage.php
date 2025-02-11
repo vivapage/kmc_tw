@@ -8,4 +8,6 @@
  */
 
 ?>
-massege
+<article id="post-<?php the_ID(); ?>" <?php post_class('prose prose-_tw'); ?>>
+    massege
+</article>

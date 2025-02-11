@@ -8,4 +8,6 @@
  */
 
 ?>
-psyho
+<article id="post-<?php the_ID(); ?>" <?php post_class('prose prose-_tw'); ?>>
+    psyho
+</article>
