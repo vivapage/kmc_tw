@@ -122,8 +122,7 @@
                 </div>
                 <div class="flex flex-row items-center gap-10">
                     <div class="button-price">
-                        <a href="/service_category/stomatologiya-kiev-zoloti-vorota/dentistry-child-kyev/"
-                            target="_self">
+                        <a href="/service_category/dentistry/dentistry-child/" target="_self">
                             Детальніше про послугу
                         </a>
                     </div>
@@ -139,42 +138,125 @@
         </div>
 
         <!-- Дитяча стоматологія 2 -->
-        <div x-show="expanded == 2" x-collapse>
+        <div x-show="expanded == 2" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
 
-                <!-- Sub Toggle 1 -->
+                <!-- Гігієна молочних зубів. профілактика -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    Sub Toggle 1
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Гігієна молочних зубів.
+                        профілактика</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/gigiyena-molochnyh-zubiv-profilaktyka/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 1  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 1 -->
-                <div x-show="expanded == 1" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+
+                <!-- Гігієна молочних зубів. профілактика 1 -->
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                    <?php priceList('gigiyena-molochnyh-zubiv-profilaktyka')?>
                 </div>
 
-                <!-- Sub Toggle 2 -->
+                <!-- Лікування молочних зубів -->
                 <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
-                    Sub Toggle 2
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Лікування молочних
+                        зубів</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/likuvannya-molochnyh-zubiv/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 2  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 2 -->
-                <div x-show="expanded == 2" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Лікування молочних зубів 2 -->
+                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                    <?php priceList('gigiyena-molochnyh-zubiv-profilaktyka')?>
+                </div>
+                <!-- Дитячі коронки -->
+                <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Дитячі коронки</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/dytyachi-koronky/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 3  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дитячі коронки 3 -->
+                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                    <?php priceList('dytyachi-koronky')?>
+                </div>
+                <!-- Видалення молочних зубів -->
+                <div @click="expanded !== 4 ? expanded = 4 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Видалення молочних
+                        зубів</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/vydalennya-molochnyh-zubiv/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 4  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Видалення молочних зубів 4 -->
+                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                    <?php priceList('vydalennya-molochnyh-zubiv')?>
+                </div>
+                <!-- Дитяча ортодонтія. Знімні апарати -->
+                <div @click="expanded !== 5 ? expanded = 5 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Дитяча ортодонтія.
+                        Знімні апарати</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/dytyacha-ortodontiya-znimni-aparaty/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 5  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дитяча ортодонтія. Знімні апарати 5 -->
+                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                    <?php priceList('dytyacha-ortodontiya-znimni-aparaty')?>
                 </div>
             </div>
         </div>
@@ -636,4 +718,7 @@
     </div>
     <div>
     </div>
+
+
+
 </article>
