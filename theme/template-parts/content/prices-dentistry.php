@@ -503,42 +503,102 @@
         </div>
 
         <!-- Хірургічна стоматологія 4 -->
-        <div x-show="expanded == 4" x-collapse>
+        <div x-show="expanded == 4" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
 
-                <!-- Sub Toggle 1 -->
+                <!-- Видалення зубу -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    Sub Toggle 1
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Видалення зубу
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/vydalennya-zubu/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 1  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 1 -->
-                <div x-show="expanded == 1" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Видалення зубу 1 -->
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                    <?php priceList('vydalennya-zubu')?>
                 </div>
 
-                <!-- Sub Toggle 3 -->
+                <!-- Складне видалення зубу -->
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Складне видалення зубу
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/skladne-vydalennya-zubu/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 2  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Складне видалення зубу 2 -->
+                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                    <?php priceList('skladne-vydalennya-zubu')?>
+                </div>
+                <!-- Видалення зуба мудрості -->
                 <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
-                    Sub Toggle 3
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Видалення зуба мудрості
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/vydalennya-zubu-mudrosti/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 3  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 3 -->
-                <div x-show="expanded == 3" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Видалення зуба мудрості 3 -->
+                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                    <?php priceList('vydalennya-zubu-mudrosti')?>
+                </div>
+                <!-- Видалення кісти зуба -->
+                <div @click="expanded !== 4 ? expanded = 4 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Видалення кісти зуба
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/vydalennya-kysty/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 4  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Видалення кісти зуба 4 -->
+                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                    <?php priceList('vydalennya-kysty')?>
                 </div>
             </div>
         </div>
@@ -568,42 +628,78 @@
         </div>
 
         <!-- Імплантація зубів 2 -->
-        <div x-show="expanded == 5" x-collapse>
+        <div x-show="expanded == 5" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
 
-                <!-- Sub Toggle 1 -->
+                <!-- Імплантація -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    Sub Toggle 1
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Імплантація
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/implantacziya/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 1  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 1 -->
-                <div x-show="expanded == 1" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Імплантація 1 -->
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                    <?php priceList('implantacziya')?>
                 </div>
 
-                <!-- Sub Toggle 3 -->
+                <!-- Синус-ліфтинг -->
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Синус-ліфтинг</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/synus-liftyng/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 2  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Синус-ліфтинг 2 -->
+                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                    <?php priceList('synus-liftyng')?>
+                </div>
+                <!-- Методика A-PRF -->
                 <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
-                    Sub Toggle 3
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Методика A-PRF
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/metodyka-a-prf/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 3  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 3 -->
-                <div x-show="expanded == 3" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Методика A-PRF 3 -->
+                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                    <?php priceList('metodyka-a-prf')?>
                 </div>
             </div>
         </div>
@@ -633,42 +729,79 @@
         </div>
 
         <!-- Протезування зубів 2 -->
-        <div x-show="expanded == 6" x-collapse>
+        <div x-show="expanded == 6" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
 
-                <!-- Sub Toggle 1 -->
+                <!-- Коронки, вініри -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    Sub Toggle 1
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Коронки, вініри
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/koronky-viniry/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 1  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 1 -->
-                <div x-show="expanded == 1" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Коронки, вініри 1 -->
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                    <?php priceList('koronky-viniry')?>
                 </div>
 
-                <!-- Sub Toggle 3 -->
+                <!-- Протезування на імплантах -->
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Протезування на
+                        імплантах</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/protezuvannya-na-implantah/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 2  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Протезування на імплантах 2 -->
+                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                    <?php priceList('protezuvannya-na-implantah')?>
+                </div>
+                <!-- Знімне протезування -->
                 <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
-                    Sub Toggle 3
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Знімне протезування
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service//service/znimne-protezuvannya//" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 3  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 3 -->
-                <div x-show="expanded == 3" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Знімне протезування 3 -->
+                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                    <?php priceList('znimne-protezuvannya')?>
                 </div>
             </div>
         </div>
@@ -698,42 +831,79 @@
         </div>
 
         <!-- Естетична стоматологія 2 -->
-        <div x-show="expanded == 7" x-collapse>
+        <div x-show="expanded == 7" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
 
-                <!-- Sub Toggle 1 -->
+                <!-- Реставрація зубів -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    Sub Toggle 1
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Реставрація зубів
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/restavracziya-zubiv/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 1  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 1 -->
-                <div x-show="expanded == 1" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Реставрація зубів 1 -->
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                    <?php priceList('restavracziya-zubiv')?>
                 </div>
 
-                <!-- Sub Toggle 3 -->
+                <!-- Художня реставрація -->
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Художня реставрація
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/hudozhnya-restavracziya/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 2  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Художня реставрація 2 -->
+                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                    <?php priceList('hudozhnya-restavracziya')?>
+                </div>
+                <!-- Відбілювання -->
                 <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
-                    Sub Toggle 3
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Відбілювання
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/vidbilyuvannya/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 3  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 3 -->
-                <div x-show="expanded == 3" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Відбілювання 3 -->
+                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                    <?php priceList('vidbilyuvannya')?>
                 </div>
             </div>
         </div>
@@ -763,42 +933,81 @@
         </div>
 
         <!-- Турбота про ясна 2 -->
-        <div x-show="expanded == 8" x-collapse>
+        <div x-show="expanded == 8" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
 
-                <!-- Sub Toggle 1 -->
+                <!-- Догляд за яснами, професійна чистка зубів -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    Sub Toggle 1
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Догляд за яснами,
+                        професійна чистка зубів
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/doglyad-za-yasnamy-profesijna-chystka-zubiv/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 1  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 1 -->
-                <div x-show="expanded == 1" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Догляд за яснами, професійна чистка зубів 1 -->
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                    <?php priceList('doglyad-za-yasnamy-profesijna-chystka-zubiv')?>
                 </div>
 
-                <!-- Sub Toggle 3 -->
+                <!-- Лікування пародонту -->
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Лікування пародонту
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/likuvannya-parodontu/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 2  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Лікування пародонту 2 -->
+                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                    <?php priceList('likuvannya-parodontu')?>
+                </div>
+                <!-- Хірургічна пародонтологія -->
                 <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
-                    Sub Toggle 3
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Хірургічна
+                        пародонтологія
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/likuvannya-parodontu/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 3  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 3 -->
-                <div x-show="expanded == 3" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Хірургічна пародонтологія 3 -->
+                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                    <?php priceList('likuvannya-parodontu')?>
                 </div>
             </div>
         </div>
@@ -828,50 +1037,128 @@
         </div>
 
         <!-- Ортодонтія 2 -->
-        <div x-show="expanded == 9" x-collapse>
+        <div x-show="expanded == 9" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
 
-                <!-- Sub Toggle 1 -->
+                <!-- Ортодонтична діагностика -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    Sub Toggle 1
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Ортодонтична
+                        діагностика</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service//service/ortodontychna-diagnostyka//" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 1  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 1 -->
-                <div x-show="expanded == 1" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Ортодонтична діагностика 1 -->
+                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                    <?php priceList('/service/ortodontychna-diagnostyka/')?>
                 </div>
 
-                <!-- Sub Toggle 3 -->
+                <!-- Ортодонтичні апарати -->
+                <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Ортодонтичні апарати
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/ortodontychni-aparaty/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 2  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ортодонтичні апарати 2 -->
+                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                    <?php priceList('ortodontychni-aparaty')?>
+                </div>
+                <!-- Суглобові шини та капи -->
                 <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">
-                    Sub Toggle 3
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Суглобові шини та капи
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/suglobovi-shyny-ta-kapy/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 3  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Accordion 3 -->
-                <div x-show="expanded == 3" x-collapse class="px-4 py-4 bg-gray-300">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem
-                    Ipsum.
+                <!-- Суглобові шини та капи 3 -->
+                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                    <?php priceList('suglobovi-shyny-ta-kapy')?>
+                </div>
+                <!-- Елайнери. Цифрова ортодонтія -->
+                <div @click="expanded !== 4 ? expanded = 4 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Елайнери. Цифрова
+                        ортодонтія</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/elajnery-czyfrova-ortodontiya/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 4  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Елайнери. Цифрова ортодонтія 4 -->
+                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                    <?php priceList('elajnery-czyfrova-ortodontiya')?>
+                </div>
+                <!-- Брекет системи -->
+                <div @click="expanded !== 5 ? expanded = 5 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Брекет системи</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/breket-systemy/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 5  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Брекет системи 5 -->
+                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                    <?php priceList('breket-systemy')?>
                 </div>
             </div>
         </div>
     </div>
     <div>
     </div>
-
-
-
-
 </article>
