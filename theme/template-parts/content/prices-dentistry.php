@@ -992,7 +992,7 @@
                     </div>
                     <div class="flex flex-row items-center gap-10">
                         <div class="button-price">
-                            <a href="/service/likuvannya-parodontu/" target="_self">
+                            <a href="/service/hirurgichna-parodontologiya/" target="_self">
                                 Детальніше про послугу
                             </a>
                         </div>
@@ -1007,7 +1007,7 @@
 
                 <!-- Хірургічна пародонтологія 3 -->
                 <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
-                    <?php priceList('likuvannya-parodontu')?>
+                    <?php priceList('hirurgichna-parodontologiya')?>
                 </div>
             </div>
         </div>
@@ -1062,7 +1062,7 @@
 
                 <!-- Ортодонтична діагностика 1 -->
                 <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
-                    <?php priceList('/service/ortodontychna-diagnostyka/')?>
+                    <?php priceList('ortodontychna-diagnostyka')?>
                 </div>
 
                 <!-- Ортодонтичні апарати -->
