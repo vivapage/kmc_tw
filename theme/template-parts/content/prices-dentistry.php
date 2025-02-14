@@ -188,7 +188,7 @@
 
                 <!-- Лікування молочних зубів 2 -->
                 <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
-                    <?php priceList('gigiyena-molochnyh-zubiv-profilaktyka')?>
+                    <?php priceList('likuvannya-molochnyh-zubiv')?>
                 </div>
                 <!-- Дитячі коронки -->
                 <div @click="expanded !== 3 ? expanded = 3 : expanded = null" class="second-tab">

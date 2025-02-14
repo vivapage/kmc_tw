@@ -237,7 +237,7 @@ if ( $query->have_posts() ) :
 		echo '</td>';
 		echo '<td>';
 		echo get_field('cost');
-		echo '</td></tr>';
+		echo ' грн.</td></tr>';
 		endif;
   endwhile;
 endif;

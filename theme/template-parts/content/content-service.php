@@ -59,6 +59,13 @@ else {
 			)
 		);
 		?>
+            <h2 class="mt-8 pt-8 border-t border-gray-200">Ціни</h2>
+            <?php
+    global $post;
+    $post_slug = $post->post_name;
+priceList($post_slug)
+            ?>
+
         </div>
         <div class="max-sm:basis-full basis-1/4 mx-auto">
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
