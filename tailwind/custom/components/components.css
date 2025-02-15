@@ -42,16 +42,29 @@
 	/* Wide width from the `theme.json` file */
 	@apply max-w-wide;
 }
+.alignwide {
+	/* Wide width from the `theme.json` file */
+	@apply max-w-wide;
+}
 
 .entry-content > .alignfull {
+	@apply max-w-none;
+}
+.alignfull {
 	@apply max-w-none;
 }
 
 .entry-content > .alignleft {
 	@apply float-left mr-8;
 }
+.alignleft {
+	@apply float-left mr-8;
+}
 
 .entry-content > .alignright {
+	@apply float-right ml-8;
+}
+.alignright {
 	@apply float-right ml-8;
 }
 #primary {

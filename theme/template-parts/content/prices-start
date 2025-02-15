@@ -1,6 +1,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('prose prose-_tw'); ?>>
     <div x-data="{ expanded: null }" x-cloak class="my-4 mx-auto">
 
+
+
         <!-- Tab1 -->
         <div @click="expanded !== 2 ? expanded = 2 : expanded = null" class="first-tab">
 
@@ -162,4 +164,9 @@
                     <?php priceList('name-item6')?>
                 </div>
             </div>
+		</div>
+
+
+
+	</div>
 </article>
