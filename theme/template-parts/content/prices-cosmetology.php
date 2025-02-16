@@ -485,6 +485,28 @@
         <div x-show="expanded == 6" x-collapse class="ml-8">
 
             <div x-data="{ expanded: null }">
+                <!-- Accordion Масаж обличчя та декольте -->
+                <div @click="expanded !== 4 ? expanded = 4 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Масаж обличчя та
+                        декольте</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/masazh-oblychchya-ta-dekolte-2/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 4  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content-Масаж обличчя та декольте -->
+                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                    <?php priceList('masazh-oblychchya-ta-dekolte-2')?>
+                </div>
 
                 <!-- Accordion Чистка обличчя -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
@@ -551,6 +573,29 @@
                 <!-- Content-Маски для обличчя -->
                 <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
                     <?php priceList('masky-dlya-oblychchya')?>
+                </div>
+
+                <!-- Accordion Альгінатні маски Derma Series -->
+                <div @click="expanded !== 5 ? expanded = 5 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 5 }">Альгінатні маски Derma
+                        Series</div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/alginatni-masky-derma-series/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 5  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content-Альгінатні маски Derma Series -->
+                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                    <?php priceList('alginatni-masky-derma-series')?>
                 </div>
             </div>
         </div>
@@ -741,7 +786,31 @@
                 <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
                     <?php priceList('liftyngovi-programy')?>
                 </div>
+
+                <!-- Accordion SPA програми -->
+                <div @click="expanded !== 5 ? expanded = 5 : expanded = null" class="second-tab">
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 5 }">SPA програми
+                    </div>
+                    <div class="flex flex-row items-center gap-10">
+                        <div class="button-price">
+                            <a href="/service/spa-programy/" target="_self">
+                                Детальніше про послугу
+                            </a>
+                        </div>
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true"
+                                x-bind:class="expanded == 5  ?  'rotate-180'  :  ''">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content-SPA програми -->
+                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                    <?php priceList('spa-programy')?>
+                </div>
             </div>
         </div>
     </div>
+
 </article>

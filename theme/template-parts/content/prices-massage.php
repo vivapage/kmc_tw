@@ -42,9 +42,10 @@
 
             <div x-data="{ expanded: null }">
 
-                <!-- Accordion Масаж лікувальний -->
+                <!-- Accordion Масаж комірцевої зони та голови -->
                 <div @click="expanded !== 1 ? expanded = 1 : expanded = null" class="second-tab">
-                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Масаж лікувальний</div>
+                    <div class="flex items-center" x-bind:class="{ 'font-bold': expanded == 1 }">Масаж комірцевої зони
+                        та голови</div>
                     <div class="flex flex-row items-center gap-10">
                         <div class="button-price">
                             <a href="/service/masazh-komirczevoyi-zony-golovy/" target="_self">
@@ -59,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Content-Масаж лікувальний -->
+                <!-- Content-Масаж комірцевої зони та голови -->
                 <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
                     <?php priceList('masazh-komirczevoyi-zony-golovy')?>
                 </div>
