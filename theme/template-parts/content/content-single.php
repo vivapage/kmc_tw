@@ -9,49 +9,82 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('prose prose-_tw'); ?>>
 
-    <header class="entry-header">
+    <header class="entry-header container max-w-content mx-auto max-sm:px-4">
+        <div class="flex justify-between">
+            <div><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></div>
 
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            <div><?php if ( has_post_thumbnail() ) : ?>
+                <figure>
+                    <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                        <?php the_post_thumbnail('object-cover max-h-80 w-auto'); ?>
+                    </a>
+                </figure>
+                <?php else : ?>
+                <figure>
+                    <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png"
+                            alt="<?php the_title_attribute(); ?>" class="object-cover max-h-40 min-h-40" />
+                    </a>
+                </figure>
+                <?php endif; ?>
+            </div>
+        </div>
 
-        <?php if ( ! is_page() ) : ?>
-        <div class="entry-meta">
-            <?php kmc_tw_entry_meta(); ?>
-        </div><!-- .entry-meta -->
-        <?php endif; ?>
+
+
     </header><!-- .entry-header -->
 
-    <?php kmc_tw_post_thumbnail(); ?>
+
 
     <div <?php kmc_tw_content_class( 'entry-content' ); ?>>
-        <?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					__( 'Continue reading<span class="sr-only"> "%s"</span>', 'kmc_tw' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
 
-		wp_link_pages(
-			array(
-				'before' => '<div>' . __( 'Pages:', 'kmc_tw' ),
-				'after'  => '</div>',
-			)
-		);
+        <div class="flex justify-between max-sm:flex-col flex-row flex-wrap">
+            <div class="basis-3/4 max-sm:border-0 max-sm:pr-0 pr-4 border-r border-gray-200">
+                <?php
+		the_content();
 		?>
+                <footer class="entry-footer container max-w-content mx-auto max-sm:px-4 relative">
+                    <?php kmc_tw_entry_footer(); ?>
+                </footer><!-- .entry-footer -->
+                <div class="prose prose-_tw container max-w-content mx-auto pt-4 mt-4 border-t border-gray-200">
+                    <?php
+
+				if ( is_singular( 'post' ) ) {
+					// Previous/next post navigation.
+					the_post_navigation(
+						array(
+							'next_text' => '<span aria-hidden="true">' . __( 'Next Post', 'kmc_tw' ) . '</span> ' .
+								'<span class="sr-only">' . __( 'Next post:', 'kmc_tw' ) . '</span> <br/>' .
+								'<span>%title</span>',
+							'prev_text' => '<span aria-hidden="true">' . __( 'Previous Post', 'kmc_tw' ) . '</span> ' .
+								'<span class="sr-only">' . __( 'Previous post:', 'kmc_tw' ) . '</span> <br/>' .
+								'<span>%title</span>',
+						)
+					);
+				}
+				?></div>
+            </div>
+            <div class="basis-1/4 pl-4 max-sm:pl-0">
+                <?php if ( is_active_sidebar( 'true_side' ) ) : ?>
+
+                <div id="true-side" class="sidebar">
+
+                    <?php dynamic_sidebar( 'true_side' ); ?>
+
+                </div>
+
+                <?php endif; ?>
+            </div>
+        </div>
+
+    </div>
+
+
     </div><!-- .entry-content -->
 
-    <footer class="entry-footer">
-        <?php kmc_tw_entry_footer(); ?>
-    </footer><!-- .entry-footer -->
+
+
 
 </article><!-- #post-${ID} -->

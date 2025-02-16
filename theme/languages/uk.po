@@ -1,0 +1,283 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kmc_tw\n"
+"POT-Creation-Date: 2025-02-16 16:32+0200\n"
+"PO-Revision-Date: 2025-02-16 16:33+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:18
+msgid "Page Not Found"
+msgstr "Сторінку не знайдено"
+
+#: 404.php:22
+msgid ""
+"This page could not be found. It might have been removed or renamed, or it "
+"may never have existed."
+msgstr ""
+"Цю сторінку не вдалося знайти. Можливо, вона була видалена або "
+"перейменована, або її ніколи не існувало."
+
+#. translators: 1: title.
+#: comments.php:34
+#, php-format
+msgid "One comment on &ldquo;%1$s&rdquo;"
+msgstr "Один коментар до &ldquo;%1$s&rdquo;"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:42
+#, php-format
+msgctxt "comments title"
+msgid "%1$s comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s коментар до &ldquo;%2$s&rdquo;"
+msgstr[1] ""
+msgstr[2] ""
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr "Коментарі закриті."
+
+#: functions.php:83
+msgid "Primary"
+msgstr "Основна"
+
+#: functions.php:84
+msgid "Footer Menu"
+msgstr "Нижнє меню"
+
+#: functions.php:132
+msgid "Footer"
+msgstr "Підвал"
+
+#: functions.php:134
+msgid "Add widgets here to appear in your footer."
+msgstr "Додайте сюди віджети для відображення в підвалі сайту."
+
+#: header.php:27
+msgid "Skip to content"
+msgstr "Перейти до вмісту"
+
+#: inc/template-functions.php:40
+msgid "Category Archives: "
+msgstr "Архіви категорій:"
+
+#: inc/template-functions.php:42
+msgid "Tag Archives: "
+msgstr "Архіви тегів:"
+
+#: inc/template-functions.php:44
+msgid "Author Archives: "
+msgstr "Архіви авторів:"
+
+#: inc/template-functions.php:46
+msgid "Yearly Archives: "
+msgstr "Архіви за рік: "
+
+#: inc/template-functions.php:46
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Р"
+
+#: inc/template-functions.php:48
+msgid "Monthly Archives: "
+msgstr "Архіви за місяць: "
+
+#: inc/template-functions.php:48
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: inc/template-functions.php:50
+msgid "Daily Archives: "
+msgstr "Щоденні архіви: "
+
+#. translators: %s: Post type singular name
+#. translators: %s: Taxonomy singular name
+#: inc/template-functions.php:55 inc/template-functions.php:62
+#, php-format
+msgid "%s Archives"
+msgstr "%s Архіви"
+
+#: inc/template-functions.php:66
+msgid "Archives:"
+msgstr "Архів:"
+
+#. translators: %s: Name of current post.
+#: inc/template-functions.php:96
+#, php-format
+msgid "Continue reading %s"
+msgstr "Продовжити читання %s"
+
+#: inc/template-functions.php:130
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш коментар очікує модерації."
+
+#: inc/template-functions.php:132
+msgid ""
+"Your comment is awaiting moderation. This is a preview; your comment will be "
+"visible after it has been approved."
+msgstr ""
+"Ваш коментар очікує на модерацію. Це попередній перегляд; ваш коментар буде "
+"видно після того, як його буде схвалено."
+
+#. translators: %s: Comment author link.
+#: inc/template-functions.php:154
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">говорить:</span>"
+
+#. translators: 1: Comment date, 2: Comment time.
+#: inc/template-functions.php:169
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s о %2$s"
+
+#: inc/template-functions.php:176
+msgid "Edit"
+msgstr "Редагувати"
+
+#: inc/template-tags.php:44
+msgid "Posted by"
+msgstr "Опубліковано"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:58
+#, php-format
+msgid "Leave a comment<span class=\"sr-only\"> on %s</span>"
+msgstr ""
+"Залиште коментар<span class=\"sr-only\"> до</span><span class=\"sr-only\"> "
+"%s</span>"
+
+#. translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:80 inc/template-tags.php:91 inc/template-tags.php:141
+#: inc/template-tags.php:152
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:85 inc/template-tags.php:146
+msgid "Posted in"
+msgstr "Опубліковано в"
+
+#: inc/template-tags.php:96 inc/template-tags.php:157
+msgid "Tags:"
+msgstr "Теги:"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:112 inc/template-tags.php:173
+#: template-parts/content/content-page.php:56
+#, php-format
+msgid "Edit <span class=\"sr-only\">%s</span>"
+msgstr "Редагувати <span class=\"sr-only\">%s</span>"
+
+#: inc/template-tags.php:264
+msgid "Newer posts"
+msgstr "Попередня сторінка"
+
+#: inc/template-tags.php:265
+msgid "Older posts"
+msgstr "Старі дописи"
+
+#: search.php:23 template-parts/content/content-none.php:22
+msgid "Search results for:"
+msgstr "Результати пошуку:"
+
+#: single-service.php:26 single-specialist.php:25 single.php:26
+msgid "Next Post"
+msgstr "Наступний запис"
+
+#: single-service.php:27 single-specialist.php:26 single.php:27
+msgid "Next post:"
+msgstr "Наступний пост :"
+
+#: single-service.php:29 single-specialist.php:28 single.php:29
+msgid "Previous Post"
+msgstr "Попередній пост"
+
+#: single-service.php:30 single-specialist.php:29 single.php:30
+msgid "Previous post:"
+msgstr "Попередній запис:"
+
+#: template-parts/content/content-excerpt.php:17
+#: template-parts/content/content-services.php:15
+msgctxt "post"
+msgid "Featured"
+msgstr "Рекомендовані"
+
+#: template-parts/content/content-none.php:30
+msgid "Nothing Found"
+msgstr "Нічого не знайдено"
+
+#: template-parts/content/content-none.php:41
+msgid ""
+"Your site is set to show the most recent posts on your homepage, but you "
+"haven&rsquo;t published any posts."
+msgstr ""
+"Ваш сайт налаштовано так, щоб показувати останні публікації на головній "
+"сторінці, але ви не опублікували жодної публікації."
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:48
+msgid "Add or publish posts"
+msgstr "Додавання або публікація дописів"
+
+#: template-parts/content/content-none.php:58
+msgid "Your search generated no results. Please try a different search."
+msgstr "Ваш пошук не дав результатів. Будь ласка, спробуйте інший пошук."
+
+#: template-parts/content/content-none.php:67
+msgid "No content matched your request."
+msgstr "За вашим запитом не знайдено жодного контенту."
+
+#: template-parts/content/content-page.php:42
+#: template-parts/content/content-service.php:57
+#: template-parts/content/content-single.php:46
+msgid "Pages:"
+msgstr "Сторінки:"
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: template-parts/content/content-service.php:44
+#: template-parts/content/content-single.php:33
+#, php-format
+msgid "Continue reading<span class=\"sr-only\"> \"%s\"</span>"
+msgstr "Читати далі<span class=\"sr-only\"> \"%s</span> \""
+
+#: template-parts/layout/header-content.php:67
+msgid "Main Navigation"
+msgstr "Основна навігація"
+
+#. Theme Name of the plugin/theme
+msgid "kmc_tw"
+msgstr "kmc_tw"
+
+#. Theme URI of the plugin/theme
+msgid "https://vivapage.info"
+msgstr "https://vivapage.info"
+
+#. Description of the plugin/theme
+msgid "A custom theme based on _tw"
+msgstr "Спеціальна тема на основі _tw"
+
+#. Author of the plugin/theme
+msgid "vivapage"
+msgstr "vivapage"
+
+#. Author URI of the plugin/theme
+msgid "https://underscoretw.com/"
+msgstr "https://underscoretw.com/"

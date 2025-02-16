@@ -132,17 +132,17 @@ if ( ! function_exists( 'kmc_tw_entry_footer' ) ) :
 		if ( 'post' === get_post_type() ) {
 
 			// Posted by.
-			kmc_tw_posted_by();
+			//kmc_tw_posted_by();
 
 			// Posted on.
-			kmc_tw_posted_on();
+			//kmc_tw_posted_on();
 
 			/* translators: used between list items, there is a space after the comma. */
 			$categories_list = get_the_category_list( __( ', ', 'kmc_tw' ) );
 			if ( $categories_list ) {
 				printf(
 				/* translators: 1: posted in label, only visible to screen readers. 2: list of categories. */
-					'<span class="sr-only">%1$s</span>%2$s',
+					'<div class="flex"><span>%1$s</span>&nbsp;%2$s</div>',
 					esc_html__( 'Posted in', 'kmc_tw' ),
 					$categories_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
@@ -153,7 +153,7 @@ if ( ! function_exists( 'kmc_tw_entry_footer' ) ) :
 			if ( $tags_list ) {
 				printf(
 				/* translators: 1: tags label, only visible to screen readers. 2: list of tags. */
-					'<span class="sr-only">%1$s</span>%2$s',
+					'<div class="flex"><span>%1$s</span>&nbsp;%2$s</div>',
 					esc_html__( 'Tags:', 'kmc_tw' ),
 					$tags_list // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
@@ -196,7 +196,7 @@ if ( ! function_exists( 'kmc_tw_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-<figure>
+<figure class="flex justify-end">
     <?php the_post_thumbnail(); ?>
 </figure><!-- .post-thumbnail -->
 
@@ -263,6 +263,7 @@ if ( ! function_exists( 'kmc_tw_the_posts_navigation' ) ) :
 				'mid_size'  => 2,
 				'prev_text' => __( 'Newer posts', 'kmc_tw' ),
 				'next_text' => __( 'Older posts', 'kmc_tw' ),
+				'class' => 'pagination',
 			)
 		);
 	}

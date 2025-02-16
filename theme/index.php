@@ -15,25 +15,31 @@
 get_header();
 ?>
 
-	<section id="primary">
-		<main id="main">
-
-		<?php
+<section id="primary">
+    <main id="main">
+        <div class="prose prose-_tw container max-w-content mx-auto">
+            <?php
 		if ( have_posts() ) {
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php single_post_title(); ?></h1>
-				</header><!-- .entry-header -->
-				<?php
+            <header class="entry-header">
+                <h1 class="entry-title"><?php single_post_title(); ?></h1>
+            </header><!-- .entry-header -->
+            <?php
 			endif;
+			?>
+            <div class="flex max-sm:flex-col flex-row justify-between flex-wrap gap-2">
+                <?php
 
 			// Load posts loop.
 			while ( have_posts() ) {
 				the_post();
 				get_template_part( 'template-parts/content/content' );
 			}
+			?>
+            </div>
+            <?php
 
 			// Previous/next page navigation.
 			kmc_tw_the_posts_navigation();
@@ -45,9 +51,9 @@ get_header();
 
 		}
 		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+        </div>
+    </main><!-- #main -->
+</section><!-- #primary -->
 
 <?php
 get_footer();

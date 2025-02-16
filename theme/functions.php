@@ -129,6 +129,17 @@ add_action( 'after_setup_theme', 'kmc_tw_setup' );
 function kmc_tw_widgets_init() {
 	register_sidebar(
 		array(
+			'id' => 'true_side', // уникальный id
+			'name' => 'Боковая колонка', // название сайдбара
+			'description' => 'Перетащите сюда виджеты, чтобы добавить их в сайдбар.', // описание
+			'before_widget' => '<div id="%1$s" class="side widget %2$s">', // по умолчанию виджеты выводятся <li>-списком
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">', // по умолчанию заголовки виджетов в <h2>
+			'after_title' => '</h3>'
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => __( 'Footer', 'kmc_tw' ),
 			'id'            => 'sidebar-1',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'kmc_tw' ),
@@ -195,4 +206,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
-

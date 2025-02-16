@@ -9,38 +9,30 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('flex basis-[24%] border border-gray-200'); ?>>
+    <div class="flex flex-col p-2 prose-figure:my-0 prose-img:my-0 relactive">
+        <?php if ( has_post_thumbnail() ) : ?>
+        <figure>
+            <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                <?php the_post_thumbnail('object-cover max-h-40 w-auto mx-auto'); ?>
+            </a>
+        </figure>
+        <?php else : ?>
+        <figure>
+            <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png"
+                    alt="<?php the_title_attribute(); ?>" class="object-cover max-h-40 min-h-40" />
+            </a>
+        </figure>
+        <?php endif; ?>
 
-	<header class="entry-header">
-		<?php
-		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span">%s</span>', esc_html_x( 'Featured', 'post', 'kmc_tw' ) );
-		}
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-		endif;
-		?>
-	</header><!-- .entry-header -->
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h3 class="text-sm"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );?>
+        </header><!-- .entry-header -->
 
-	<?php kmc_tw_post_thumbnail(); ?>
-
-	<div <?php kmc_tw_content_class( 'entry-content' ); ?>>
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div>' . __( 'Pages:', 'kmc_tw' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php kmc_tw_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+        <footer class="entry-footer">
+            <?php //kmc_tw_entry_footer(); ?>
+        </footer><!-- .entry-footer -->
+    </div>
 
 </article><!-- #post-${ID} -->
