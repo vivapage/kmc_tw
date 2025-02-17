@@ -38,7 +38,7 @@
         </div>
 
         <!-- Accordion-Масаж лікувальний -->
-        <div x-show="expanded == 1" x-collapse class="ml-8">
+        <div x-show="expanded == 1" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <!-- Content-Масаж комірцевої зони та голови -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('masazh-komirczevoyi-zony-golovy')?>
                 </div>
 
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <!-- Content-Масаж кінцівок -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('masazh-kinczivok')?>
                 </div>
 
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <!-- Content-Масаж спини -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('masazh-spyny')?>
                 </div>
 
@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <!-- Content-Масаж тіла -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('masazh-tila')?>
                 </div>
 
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <!-- Content-Масаж для дітей -->
-                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 5" class="flex justify-center m-10">
                     <?php priceList('masazh-dlya-ditej')?>
                 </div>
             </div>
@@ -180,7 +180,7 @@
         </div>
 
         <!-- Accordion-Реабілітація. Вертебрологія -->
-        <div x-show="expanded == 2" x-collapse class="ml-8">
+        <div x-show="expanded == 2" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -202,7 +202,7 @@
                     </div>
                 </div>
                 <!-- Content-Консультація -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('konsultacziya-2')?>
                 </div>
 
@@ -225,7 +225,7 @@
                     </div>
                 </div>
                 <!-- Content-Фізична реабілітація -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('/service/fizychna-reabilitacziya/')?>
                 </div>
 
@@ -247,7 +247,7 @@
                     </div>
                 </div>
                 <!-- Content-Вертебрологія -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('vertebrologiya')?>
                 </div>
 
@@ -269,7 +269,7 @@
                     </div>
                 </div>
                 <!-- Content-Кінезіотерапія -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('kinezioterapiya')?>
                 </div>
 
@@ -291,7 +291,7 @@
                     </div>
                 </div>
                 <!-- Content-Остеопатія -->
-                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 5" class="flex justify-center m-10">
                     <?php priceList('osteopatiya')?>
                 </div>
             </div>
@@ -322,7 +322,7 @@
         </div>
 
         <!-- Accordion-Фейсбілдінг -->
-        <div x-show="expanded == 3" x-collapse class="ml-8">
+        <div x-show="expanded == 3" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -356,7 +356,7 @@
         </div>
 
         <!-- Accordion-Оздоровчі масажі -->
-        <div x-show="expanded == 4" x-collapse class="ml-8">
+        <div x-show="expanded == 4" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -378,7 +378,7 @@
                     </div>
                 </div>
                 <!-- Content-Оздоровчий масаж -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('ozdorovchyj-masazh')?>
                 </div>
 
@@ -401,7 +401,7 @@
                     </div>
                 </div>
                 <!-- Content-Лімфодренажний масаж -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('limfodrenazhnyj-masazh')?>
                 </div>
 
@@ -424,7 +424,7 @@
                     </div>
                 </div>
                 <!-- Content-Енергетичний масаж -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('energetychnyj-masazh')?>
                 </div>
             </div>
@@ -455,7 +455,7 @@
         </div>
 
         <!-- Accordion-Релаксуючі масажі -->
-        <div x-show="expanded == 5" x-collapse class="ml-8">
+        <div x-show="expanded == 5" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -477,7 +477,7 @@
                     </div>
                 </div>
                 <!-- Content-Релаксуючі масажі -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('relaksuyuchi-masazhi')?>
                 </div>
 
@@ -500,7 +500,7 @@
                     </div>
                 </div>
                 <!-- Content-Ексклюзивні масажі -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('eksklyuzyvni-masazhi')?>
                 </div>
 
@@ -523,7 +523,7 @@
                     </div>
                 </div>
                 <!-- Content-Ексклюзивні масажі для чоловіків -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('eksklyuzyvni-masazhi-dlya-cholovikiv')?>
                 </div>
 
@@ -546,7 +546,7 @@
                     </div>
                 </div>
                 <!-- Content-Ексклюзивні масажі для двох -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('eksklyuzyvni-masazhi-dlya-dvoh')?>
                 </div>
             </div>
@@ -577,7 +577,7 @@
         </div>
 
         <!-- Accordion-Антицелюлітні програми -->
-        <div x-show="expanded == 6" x-collapse class="ml-8">
+        <div x-show="expanded == 6" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -600,7 +600,7 @@
                     </div>
                 </div>
                 <!-- Content-Антицелюлітний масаж -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('antyczelyulitnyj-masazh')?>
                 </div>
 
@@ -623,7 +623,7 @@
                     </div>
                 </div>
                 <!-- Content-Антицелюлітне обгортання -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('antyczelyulitne-obgortannya')?>
                 </div>
             </div>
@@ -654,7 +654,7 @@
         </div>
 
         <!-- Accordion-Spa-програми -->
-        <div x-show="expanded == 7" x-collapse class="ml-8">
+        <div x-show="expanded == 7" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -676,7 +676,7 @@
                     </div>
                 </div>
                 <!-- Content-Аромамасаж -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('aromamasazh')?>
                 </div>
 
@@ -698,7 +698,7 @@
                     </div>
                 </div>
                 <!-- Content-Spa для тіла -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('spa-dlya-tila')?>
                 </div>
 
@@ -720,7 +720,7 @@
                     </div>
                 </div>
                 <!-- Content-SPA-обгортання -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('spa-obgortannya')?>
                 </div>
             </div>

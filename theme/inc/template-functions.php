@@ -231,14 +231,15 @@ if ( $query->have_posts() ) :
   while ( $query->have_posts() ) : $query->the_post();
 	$custom_field = get_field( 'posluga');
 	//print_r ($custom_field);
-	if ($custom_field[0]->post_name == $cat ) :
+	$curcat = $custom_field[0]->post_name;
+	if ($curcat === $cat ) :
 		echo '<tr><td>';
 		echo the_title();
 		echo '</td>';
 		echo '<td>';
 		echo get_field('cost');
 		echo ' грн.</td></tr>';
-		endif;
+	endif;
   endwhile;
 endif;
 echo'</tbody></table></figure>';

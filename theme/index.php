@@ -29,7 +29,7 @@ get_header();
             <?php
 			endif;
 			?>
-            <div class="flex max-sm:flex-col flex-row justify-between flex-wrap gap-2">
+            <div class="flex max-sm:flex-col flex-row justify-start flex-wrap gap-2">
                 <?php
 
 			// Load posts loop.

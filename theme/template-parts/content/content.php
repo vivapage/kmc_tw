@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('flex basis-[24%] border border-gray-200'); ?>>
-    <div class="flex flex-col p-2 prose-figure:my-0 prose-img:my-0 relactive">
+    <div class="flex flex-col p-2 prose-figure:my-0 prose-img:my-0 w-full">
         <?php if ( has_post_thumbnail() ) : ?>
         <figure>
             <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
@@ -27,12 +27,8 @@
         <?php endif; ?>
 
         <header class="entry-header">
-            <?php the_title( sprintf( '<h3 class="text-sm"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );?>
+            <?php the_title( sprintf( '<h3 class="text-sm text-center"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );?>
         </header><!-- .entry-header -->
-
-        <footer class="entry-footer">
-            <?php //kmc_tw_entry_footer(); ?>
-        </footer><!-- .entry-footer -->
     </div>
 
 </article><!-- #post-${ID} -->

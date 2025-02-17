@@ -36,7 +36,7 @@
         </div>
 
         <!-- Accordion-Лазерна косметологія -->
-        <div x-show="expanded == 1" x-collapse class="ml-8">
+        <div x-show="expanded == 1" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <!-- Content-SMAS-ліфтинг -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('smas-liftyng')?>
                 </div>
 
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <!-- Content-Блефаропластика -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('blefaroplastyka')?>
                 </div>
             </div>
@@ -111,7 +111,7 @@
         </div>
 
         <!-- Accordion-Ін'єкційна косметологія -->
-        <div x-show="expanded == 2" x-collapse class="ml-8">
+        <div x-show="expanded == 2" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <!-- Content-Мезотерапія -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('mezoterapiya')?>
                 </div>
 
@@ -155,7 +155,7 @@
                     </div>
                 </div>
                 <!-- Content-Плазмоліфтінг -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('plazmolifting')?>
                 </div>
 
@@ -177,7 +177,7 @@
                     </div>
                 </div>
                 <!-- Content-Біорепарація -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('bioreparacziya')?>
                 </div>
 
@@ -199,7 +199,7 @@
                     </div>
                 </div>
                 <!-- Content-Біоревіталізація -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('biorevitalizacziya')?>
                 </div>
 
@@ -221,7 +221,7 @@
                     </div>
                 </div>
                 <!-- Content-Векторний ліфтинг -->
-                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 5" class="flex justify-center m-10">
                     <?php priceList('vektornyj-liftyng')?>
                 </div>
 
@@ -243,7 +243,7 @@
                     </div>
                 </div>
                 <!-- Content-Ботулінотерапія -->
-                <div x-show="expanded == 6" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 6" class="flex justify-center m-10">
                     <?php priceList('botulinoterapiya')?>
                 </div>
             </div>
@@ -274,7 +274,7 @@
         </div>
 
         <!-- Accordion-Контурна пластика -->
-        <div x-show="expanded == 3" x-collapse class="ml-8">
+        <div x-show="expanded == 3" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -308,7 +308,7 @@
         </div>
 
         <!-- Accordion-Апаратна косметологія -->
-        <div x-show="expanded == 4" x-collapse class="ml-8">
+        <div x-show="expanded == 4" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -330,7 +330,7 @@
                     </div>
                 </div>
                 <!-- Content-Мікродермобразія -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('mikrodermobraziya')?>
                 </div>
 
@@ -352,7 +352,7 @@
                     </div>
                 </div>
                 <!-- Content-Кріодермія -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('kriodermiya')?>
                 </div>
 
@@ -374,7 +374,7 @@
                     </div>
                 </div>
                 <!-- Content-Міостимуляція -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('miostymulyacziya')?>
                 </div>
             </div>
@@ -405,7 +405,7 @@
         </div>
 
         <!-- Accordion-Пілінги -->
-        <div x-show="expanded == 5" x-collapse class="ml-8">
+        <div x-show="expanded == 5" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -428,7 +428,7 @@
                     </div>
                 </div>
                 <!-- Content-Пілінги для обличчя та декольте -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('pilingy-dlya-oblychchya-ta-dekolte')?>
                 </div>
 
@@ -451,7 +451,7 @@
                     </div>
                 </div>
                 <!-- Content-Пілінги-біоревіталізанти для обличчя -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('pilingy-biorevitalizanty-dlya-oblychchya')?>
                 </div>
             </div>
@@ -482,7 +482,7 @@
         </div>
 
         <!-- Accordion-Догляд обличчя та декольте -->
-        <div x-show="expanded == 6" x-collapse class="ml-8">
+        <div x-show="expanded == 6" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <!-- Accordion Масаж обличчя та декольте -->
@@ -504,7 +504,7 @@
                     </div>
                 </div>
                 <!-- Content-Масаж обличчя та декольте -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('masazh-oblychchya-ta-dekolte-2')?>
                 </div>
 
@@ -526,7 +526,7 @@
                     </div>
                 </div>
                 <!-- Content-Чистка обличчя -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('chystka-oblychchya')?>
                 </div>
 
@@ -549,7 +549,7 @@
                     </div>
                 </div>
                 <!-- Content-Догляд за обличчям -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('doglyad-za-oblychchyam')?>
                 </div>
 
@@ -571,7 +571,7 @@
                     </div>
                 </div>
                 <!-- Content-Маски для обличчя -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('masky-dlya-oblychchya')?>
                 </div>
 
@@ -594,7 +594,7 @@
                     </div>
                 </div>
                 <!-- Content-Альгінатні маски Derma Series -->
-                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 5" class="flex justify-center m-10">
                     <?php priceList('alginatni-masky-derma-series')?>
                 </div>
             </div>
@@ -625,7 +625,7 @@
         </div>
 
         <!-- Accordion-Косметологія для чоловіків -->
-        <div x-show="expanded == 7" x-collapse class="ml-8">
+        <div x-show="expanded == 7" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -659,7 +659,7 @@
         </div>
 
         <!-- Accordion-Лікувальна косметологія для підлітків -->
-        <div x-show="expanded == 8" x-collapse class="ml-8">
+        <div x-show="expanded == 8" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -693,7 +693,7 @@
         </div>
 
         <!-- Accordion-SPA&WELLNESS -->
-        <div x-show="expanded == 9" x-collapse class="ml-8">
+        <div x-show="expanded == 9" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -715,7 +715,7 @@
                     </div>
                 </div>
                 <!-- Content-Догляд за тілом -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('doglyad-za-tilom')?>
                 </div>
 
@@ -738,7 +738,7 @@
                     </div>
                 </div>
                 <!-- Content-Корекція форми обличчя -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('korekcziya-formy-oblychchya')?>
                 </div>
 
@@ -760,7 +760,7 @@
                     </div>
                 </div>
                 <!-- Content-Депіляція -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('depilyacziya')?>
                 </div>
 
@@ -783,7 +783,7 @@
                     </div>
                 </div>
                 <!-- Content-Ліфтингові програми -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('liftyngovi-programy')?>
                 </div>
 
@@ -806,7 +806,7 @@
                     </div>
                 </div>
                 <!-- Content-SPA програми -->
-                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 5" class="flex justify-center m-10">
                     <?php priceList('spa-programy')?>
                 </div>
             </div>

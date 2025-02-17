@@ -36,7 +36,7 @@
         </div>
 
         <!-- Accordion-Консультація психолога -->
-        <div x-show="expanded == 1" x-collapse class="ml-8">
+        <div x-show="expanded == 1" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Accordion-Онлайн консультація -->
-        <div x-show="expanded == 2" x-collapse class="ml-8">
+        <div x-show="expanded == 2" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -104,7 +104,7 @@
         </div>
 
         <!-- Accordion-Системні розстановки по Хеллінгеру -->
-        <div x-show="expanded == 3" x-collapse class="ml-8">
+        <div x-show="expanded == 3" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -138,7 +138,7 @@
         </div>
 
         <!-- Accordion-Коучинг -->
-        <div x-show="expanded == 4" x-collapse class="ml-8">
+        <div x-show="expanded == 4" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -172,7 +172,7 @@
         </div>
 
         <!-- Accordion-Кайтен-сесії -->
-        <div x-show="expanded == 5" x-collapse class="ml-8">
+        <div x-show="expanded == 5" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -206,7 +206,7 @@
         </div>
 
         <!-- Accordion-Холодинаміка -->
-        <div x-show="expanded == 6" x-collapse class="ml-8">
+        <div x-show="expanded == 6" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -240,7 +240,7 @@
         </div>
 
         <!-- Accordion-Кармічний менеджмент -->
-        <div x-show="expanded == 7" x-collapse class="ml-8">
+        <div x-show="expanded == 7" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
@@ -274,7 +274,7 @@
         </div>
 
         <!-- Accordion-Трансформація особистості -->
-        <div x-show="expanded == 8" x-collapse class="ml-8">
+        <div x-show="expanded == 8" class="ml-8">
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">

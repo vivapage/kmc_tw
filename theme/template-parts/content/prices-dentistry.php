@@ -36,7 +36,7 @@
         </div>
 
         <!-- Консультація, діагностика 2 -->
-        <div x-show="expanded == 1" x-collapse class="ml-8">
+        <div x-show="expanded == 1" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -60,7 +60,7 @@
                 </div>
 
                 <!-- Консультація 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-4">
+                <div x-show="expanded == 1" class="flex justify-center m-4">
                     <?php priceList('konsultacziya')?>
                 </div>
 
@@ -84,7 +84,7 @@
                 </div>
 
                 <!-- Онлайн консультація 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('onlajn-konsultacziya')?>
                 </div>
 
@@ -107,7 +107,7 @@
                 </div>
 
                 <!-- Види діагностики 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('vydy-diagnostyky')?>
                 </div>
             </div>
@@ -138,7 +138,7 @@
         </div>
 
         <!-- Дитяча стоматологія 2 -->
-        <div x-show="expanded == 2" x-collapse class="ml-8">
+        <div x-show="expanded == 2" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -163,7 +163,7 @@
 
 
                 <!-- Гігієна молочних зубів. профілактика 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('gigiyena-molochnyh-zubiv-profilaktyka')?>
                 </div>
 
@@ -187,7 +187,7 @@
                 </div>
 
                 <!-- Лікування молочних зубів 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('likuvannya-molochnyh-zubiv')?>
                 </div>
                 <!-- Дитячі коронки -->
@@ -209,7 +209,7 @@
                 </div>
 
                 <!-- Дитячі коронки 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('dytyachi-koronky')?>
                 </div>
                 <!-- Видалення молочних зубів -->
@@ -232,7 +232,7 @@
                 </div>
 
                 <!-- Видалення молочних зубів 4 -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('vydalennya-molochnyh-zubiv')?>
                 </div>
                 <!-- Дитяча ортодонтія. Знімні апарати -->
@@ -255,7 +255,7 @@
                 </div>
 
                 <!-- Дитяча ортодонтія. Знімні апарати 5 -->
-                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 5" class="flex justify-center m-10">
                     <?php priceList('dytyacha-ortodontiya-znimni-aparaty')?>
                 </div>
                 <!-- Капові апарати -->
@@ -277,7 +277,7 @@
                 </div>
 
                 <!-- Капові апарати 6 -->
-                <div x-show="expanded == 6" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 6" class="flex justify-center m-10">
                     <?php priceList('kapovi-aparaty')?>
                 </div>
                 <!-- Міофункціональні апарати -->
@@ -300,7 +300,7 @@
                 </div>
 
                 <!-- Міофункціональні апарати 7 -->
-                <div x-show="expanded == 7" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 7" class="flex justify-center m-10">
                     <?php priceList('miofunkczionalni-aparaty')?>
                 </div>
                 <!-- Цифрова ортодонтія -->
@@ -323,7 +323,7 @@
                 </div>
 
                 <!-- Цифрова ортодонтія 8 -->
-                <div x-show="expanded == 8" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 8" class="flex justify-center m-10">
                     <?php priceList('czyfrova-ortodontiya')?>
                 </div>
                 <!-- Дитячі брекети -->
@@ -346,7 +346,7 @@
                 </div>
 
                 <!-- Дитячі брекети 9 -->
-                <div x-show="expanded == 9" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 9" class="flex justify-center m-10">
                     <?php priceList('dytyachi-brekety')?>
                 </div>
             </div>
@@ -377,7 +377,7 @@
         </div>
 
         <!-- Лікування зубів 2 -->
-        <div x-show="expanded == 3" x-collapse class="ml-8">
+        <div x-show="expanded == 3" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -402,7 +402,7 @@
                 </div>
 
                 <!-- Лікування карієсу та його профілактика 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('likuvannya-kariyesu-ta-jogo-profilaktyka')?>
                 </div>
 
@@ -426,7 +426,7 @@
                 </div>
 
                 <!-- Пломбування зубів 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('plombuvannya-zubiv')?>
                 </div>
                 <!-- Лікування каналів зубу -->
@@ -449,7 +449,7 @@
                 </div>
 
                 <!-- Лікування каналів зубу 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('likuvannya-kanaliv-zubu')?>
                 </div>
                 <!-- Лікування періодонтиту -->
@@ -472,7 +472,7 @@
                 </div>
 
                 <!-- Лікування періодонтиту 4 -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('likuvannya-periodontytu')?>
                 </div>
             </div>
@@ -503,7 +503,7 @@
         </div>
 
         <!-- Хірургічна стоматологія 4 -->
-        <div x-show="expanded == 4" x-collapse class="ml-8">
+        <div x-show="expanded == 4" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -527,7 +527,7 @@
                 </div>
 
                 <!-- Видалення зубу 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('vydalennya-zubu')?>
                 </div>
 
@@ -551,7 +551,7 @@
                 </div>
 
                 <!-- Складне видалення зубу 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('skladne-vydalennya-zubu')?>
                 </div>
                 <!-- Видалення зуба мудрості -->
@@ -574,7 +574,7 @@
                 </div>
 
                 <!-- Видалення зуба мудрості 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('vydalennya-zubu-mudrosti')?>
                 </div>
                 <!-- Видалення кісти зуба -->
@@ -597,7 +597,7 @@
                 </div>
 
                 <!-- Видалення кісти зуба 4 -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('vydalennya-kysty')?>
                 </div>
             </div>
@@ -628,7 +628,7 @@
         </div>
 
         <!-- Імплантація зубів 2 -->
-        <div x-show="expanded == 5" x-collapse class="ml-8">
+        <div x-show="expanded == 5" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -652,7 +652,7 @@
                 </div>
 
                 <!-- Імплантація 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('implantacziya')?>
                 </div>
 
@@ -675,7 +675,7 @@
                 </div>
 
                 <!-- Синус-ліфтинг 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('synus-liftyng')?>
                 </div>
                 <!-- Методика A-PRF -->
@@ -698,7 +698,7 @@
                 </div>
 
                 <!-- Методика A-PRF 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('metodyka-a-prf')?>
                 </div>
             </div>
@@ -729,7 +729,7 @@
         </div>
 
         <!-- Протезування зубів 2 -->
-        <div x-show="expanded == 6" x-collapse class="ml-8">
+        <div x-show="expanded == 6" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -753,7 +753,7 @@
                 </div>
 
                 <!-- Коронки, вініри 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('koronky-viniry')?>
                 </div>
 
@@ -777,7 +777,7 @@
                 </div>
 
                 <!-- Протезування на імплантах 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('protezuvannya-na-implantah')?>
                 </div>
                 <!-- Знімне протезування -->
@@ -800,7 +800,7 @@
                 </div>
 
                 <!-- Знімне протезування 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('znimne-protezuvannya')?>
                 </div>
             </div>
@@ -831,7 +831,7 @@
         </div>
 
         <!-- Естетична стоматологія 2 -->
-        <div x-show="expanded == 7" x-collapse class="ml-8">
+        <div x-show="expanded == 7" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -855,7 +855,7 @@
                 </div>
 
                 <!-- Реставрація зубів 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('restavracziya-zubiv')?>
                 </div>
 
@@ -879,7 +879,7 @@
                 </div>
 
                 <!-- Художня реставрація 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('hudozhnya-restavracziya')?>
                 </div>
                 <!-- Відбілювання -->
@@ -902,7 +902,7 @@
                 </div>
 
                 <!-- Відбілювання 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('vidbilyuvannya')?>
                 </div>
             </div>
@@ -933,7 +933,7 @@
         </div>
 
         <!-- Турбота про ясна 2 -->
-        <div x-show="expanded == 8" x-collapse class="ml-8">
+        <div x-show="expanded == 8" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -958,7 +958,7 @@
                 </div>
 
                 <!-- Догляд за яснами, професійна чистка зубів 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('doglyad-za-yasnamy-profesijna-chystka-zubiv')?>
                 </div>
 
@@ -982,7 +982,7 @@
                 </div>
 
                 <!-- Лікування пародонту 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('likuvannya-parodontu')?>
                 </div>
                 <!-- Хірургічна пародонтологія -->
@@ -1006,7 +1006,7 @@
                 </div>
 
                 <!-- Хірургічна пародонтологія 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('hirurgichna-parodontologiya')?>
                 </div>
             </div>
@@ -1037,7 +1037,7 @@
         </div>
 
         <!-- Ортодонтія 2 -->
-        <div x-show="expanded == 9" x-collapse class="ml-8">
+        <div x-show="expanded == 9" class="ml-8">
 
             <div x-data="{ expanded: null }">
 
@@ -1061,7 +1061,7 @@
                 </div>
 
                 <!-- Ортодонтична діагностика 1 -->
-                <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 1" class="flex justify-center m-10">
                     <?php priceList('ortodontychna-diagnostyka')?>
                 </div>
 
@@ -1085,7 +1085,7 @@
                 </div>
 
                 <!-- Ортодонтичні апарати 2 -->
-                <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 2" class="flex justify-center m-10">
                     <?php priceList('ortodontychni-aparaty')?>
                 </div>
                 <!-- Суглобові шини та капи -->
@@ -1108,7 +1108,7 @@
                 </div>
 
                 <!-- Суглобові шини та капи 3 -->
-                <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 3" class="flex justify-center m-10">
                     <?php priceList('suglobovi-shyny-ta-kapy')?>
                 </div>
                 <!-- Елайнери. Цифрова ортодонтія -->
@@ -1131,7 +1131,7 @@
                 </div>
 
                 <!-- Елайнери. Цифрова ортодонтія 4 -->
-                <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 4" class="flex justify-center m-10">
                     <?php priceList('elajnery-czyfrova-ortodontiya')?>
                 </div>
                 <!-- Брекет системи -->
@@ -1153,7 +1153,7 @@
                 </div>
 
                 <!-- Брекет системи 5 -->
-                <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
+                <div x-show="expanded == 5" class="flex justify-center m-10">
                     <?php priceList('breket-systemy')?>
                 </div>
             </div>

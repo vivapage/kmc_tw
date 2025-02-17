@@ -69,7 +69,7 @@ a.wp-block-button__link, a:hover.wp-block-button__link {
 }
 
 .button-price {
-	@apply border border-gray-200 px-4 py-2 rounded-full bg-orange-block text-white;
+	@apply border border-gray-200 px-4 py-2 rounded-full bg-orange-block text-white max-sm:hidden;
 }
 
 .button-price a {
