@@ -65,6 +65,10 @@ else {
     $post_slug = $post->post_name;
 priceList($post_slug)
             ?>
+            <div class="wp-block-buttons mt-4 mb-6 text-center">
+                <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button"
+                        href="/prices/">Всі ціни</a></div>
+            </div>
 
         </div>
         <div class="max-sm:basis-full basis-1/4 mx-auto">
