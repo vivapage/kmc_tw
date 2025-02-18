@@ -94,3 +94,21 @@ a.wp-block-button__link, a:hover.wp-block-button__link {
 .post-navigation .nav-links {
 	@apply flex flex-row justify-between;
 }
+
+
+.scroll-snap-x {
+	scroll-snap-type: x mandatory;
+}
+
+.snap-center {
+	scroll-snap-align: center;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
