@@ -42,7 +42,7 @@
     </div>
     <div
         class="flex flex-col lg:flex-row container max-lg:justify-center justify-between max-w-content mx-auto py-4 border-t border-gray-200">
-        <div class="flexmax-lg:justify-center max-lg:mb-4">&copy <?php echo date('Y');?> All rights reserved.
+        <div class="flex max-lg:justify-center max-lg:mb-4">&copy <?php echo date('Y');?> All rights reserved.
         </div>
         <div class="flex max-lg:justify-center max-lg:mb-4"><a href="/privacy-policy/">Політика конфідеційності</a>
         </div>
@@ -72,7 +72,8 @@
         </div>
     </div>
     <div class="flex flex-col container max-w-content mx-auto py-4 border-t border-gray-200">
-        <div class="text-sm text-right">Рішення про видачу ліцензії МОЗ України від 06.12.2024 № 2046</div>
+        <div class="max-sm:mx-4 text-sm text-right max-sm:text-center">Рішення про видачу ліцензії МОЗ України
+            від 06.12.2024 № 2046</div>
     </div>
 
 
