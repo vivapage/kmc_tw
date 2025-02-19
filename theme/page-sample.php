@@ -32,12 +32,20 @@ get_header();
 				}
 
 			endwhile; // End of the loop.
-			?>
-        <?php
-// WP_Query arguments
+
+
+?>
+        <div class="container max-w-content mt-12 flex mx-auto items-center prose prose-_tw">
+
+            <div x-data="carousel()" x-init="init()" class="relative overflow-hidden group">
+                <div x-ref="container"
+                    class="md:flex md:overflow-x-scroll scroll-snap-x md:space-x-4 space-y-4 md:space-y-0 no-scrollbar">
+                    <?php
+					// WP_Query arguments
 $args = array(
 	'post_type'              => array( 'specialist' ),
 	'post_status'            => array( 'publish' ),
+	/*
 	'tax_query' => array(
 		array(
 			'taxonomy' => 'specialist-category',
@@ -45,129 +53,60 @@ $args = array(
 			'terms'    => 'stomatologiya'
 		)
 	),
+	*/
 );
 
 // The Query
 $query = new WP_Query( $args );
 
 if ( $query->have_posts() ) {
-	echo '<ul>';
 	while ( $query->have_posts() ) {
 		$query->the_post();
-		echo '<li>' . esc_html( get_the_title() ) . '</li>';
+		?>
+                    <div
+                        class="ml-2 flex-auto grow-0 shrink-0 w-67 max-sm:w-96 justify-center snap-center overflow-hidden shadow-md">
+
+                        <div class="px-2 py-3 flex flex-col text-center">
+                            <div><?php if ( has_post_thumbnail() ) { ?>
+                                <figure class="!mb-4 !mt-0">
+                                    <?php echo get_the_post_thumbnail(); ?>
+                                </figure>
+                                <?php } ?>
+                            </div>
+                            <div class="text-lg font-semibold"><?php the_title(); ?></div>
+                            <div class="text-sm my-2"><?php if ( get_field('specialty') ) :
+                                echo get_field('specialty');
+                                endif; ?>
+                            </div>
+                            <div class="mt-2">
+                                <a class="font-semibold" href="<?phpthe_permalink();?>">Докладніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
 	}
-	echo '</ul>';
 }
 else {
 	// Постов не найдено
 }
-
-// Возвращаем оригинальные данные поста. Сбрасываем $post.
-wp_reset_postdata();
-
-
 ?>
-
-        <div class="container max-w-content mx-auto">
-
-            <div class="mt-12 flex mx-auto items-center">
-                <div x-data="carousel()" x-init="init()" class="relative overflow-hidden group">
-                    <div x-ref="container"
-                        class="md:-ml-4 md:flex md:overflow-x-scroll scroll-snap-x md:space-x-4 space-y-4 md:space-y-0 no-scrollbar">
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                        <div
-                            class="ml-4 flex-auto flex-grow-0 flex-shrink-0 w-67 max-sm:w-96 rounded-lg bg-gray-100 items-center justify-center snap-center overflow-hidden shadow-md">
-                            <div><img src="/assets/images/andy-holmes-4iapyjvm714-unsplash-sm.jpg"></div>
-                            <div class="px-2 py-3 flex justify-between">
-                                <div class="text-lg font-semibold">Content Title</div>
-                                <time>3/6/2021</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div @click="scrollTo(prev)" x-show="prev !== null"
-                        class="hidden md:block absolute top-1/2 left-0 bg-white p-2 transition-transform ease-in-out transform -translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
-                        <div>&lt;</div>
-                    </div>
-                    <div @click="scrollTo(next)" x-show="next !== null"
-                        class="hidden md:block absolute top-1/2 right-0 bg-white p-2 transition-transform ease-in-out transform translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
-                        <div>&gt;</div>
-                    </div>
+                </div>
+                <div @click="scrollTo(prev)" x-show="prev !== null"
+                    class="hidden md:block absolute top-1/2 left-0 bg-orange-block p-2 transition-transform ease-in-out transform -translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
+                    <div class="text-white text-2xl font-bold">&lt;</div>
+                </div>
+                <div @click="scrollTo(next)" x-show="next !== null"
+                    class="hidden md:block absolute top-1/2 right-0 bg-orange-block p-2 transition-transform ease-in-out transform translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
+                    <div class="text-white text-2xl font-bold">&gt;</div>
                 </div>
             </div>
         </div>
-        </div>
 
+        <?php
+// Возвращаем оригинальные данные поста. Сбрасываем $post.
+wp_reset_postdata();
+?>
+        </div>
     </main><!-- #main -->
 </section><!-- #primary -->
 

@@ -37,9 +37,9 @@ get_header();
 		}
 		?>
 
-        <div class="prose prose-_tw container max-w-content mx-auto px-4 mt-8">
-            <h1 style="text-align: center;">ПОСЛУГИ</h1>
-            <div class="flex max-md:flex-col flex-row justify-between">
+        <div class="prose prose-_tw container max-w-content mx-auto">
+            <h1 class="text-center mt-8">ПОСЛУГИ</h1>
+            <div class="flex max-md:flex-col flex-row justify-between max-sm:mx-4">
                 <div class="flex flex-col max-md:basis-full basis-1/2 justify-between">
                     <div class="flex max-sm:flex-col flex-row justify-between">
                         <div class="flex basis-1/2">
@@ -99,6 +99,73 @@ get_header();
                     </div>
                 </div>
             </div>
+            <h1 class="text-center pt-8 mt-8 border-t border-gray-200">НАШІ ФАХІВЦІ</h1>
+            <div class="container max-w-content mx-auto px-4">
+                <div x-data="carousel()" x-init="init()" class="relative overflow-hidden group">
+                    <div x-ref="container"
+                        class="md:flex md:overflow-x-scroll scroll-snap-x md:space-x-4 space-y-4 md:space-y-0 no-scrollbar">
+                        <?php
+					// WP_Query arguments
+$args = array(
+	'post_type'              => array( 'specialist' ),
+	'post_status'            => array( 'publish' ),
+	/*
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'specialist-category',
+			'field'    => 'slug',
+			'terms'    => 'stomatologiya'
+		)
+	),
+	*/
+);
+
+// The Query
+$query = new WP_Query( $args );
+
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		?>
+                        <div
+                            class="ml-1 flex-auto grow-0 shrink-0 w-66 max-sm:w-96 justify-center snap-center overflow-hidden shadow-md">
+
+                            <div class="px-2 py-3 flex flex-col text-center">
+                                <div><?php if ( has_post_thumbnail() ) { ?>
+                                    <figure class="!mb-4 !mt-0">
+                                        <?php echo get_the_post_thumbnail(); ?>
+                                    </figure>
+                                    <?php } ?>
+                                </div>
+                                <div class="text-lg font-semibold"><?php the_title(); ?></div>
+                                <div class="text-sm my-2"><?php if ( get_field('specialty') ) :
+                                echo get_field('specialty');
+                                endif; ?>
+                                </div>
+                                <div class="mt-2">
+                                    <a class="font-semibold" href="<?php the_permalink();?>">Докладніше</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+	}
+}
+else {
+	// Постов не найдено
+}
+?>
+                    </div>
+                    <div @click="scrollTo(prev)" x-show="prev !== null"
+                        class="hidden md:block absolute top-1/2 left-0 bg-orange-block p-2 transition-transform ease-in-out transform -translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
+                        <div class="text-white text-2xl font-bold">&lt;</div>
+                    </div>
+                    <div @click="scrollTo(next)" x-show="next !== null"
+                        class="hidden md:block absolute top-1/2 right-0 bg-orange-block p-2 transition-transform ease-in-out transform translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
+                        <div class="text-white text-2xl font-bold">&gt;</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </main><!-- #main -->

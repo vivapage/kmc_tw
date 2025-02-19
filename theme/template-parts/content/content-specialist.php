@@ -27,7 +27,7 @@
             </div>
             <div class="flex flex-col basis-2/3">
                 <div>
-                    <?php the_title( '<h2 class="entry-title text-3xl">', '</h2>' );	?>
+                    <?php the_title( '<h2 class="entry-title text-3xl">', '</h2>' );?>
                 </div>
                 <div class="text-xl my-2">
                     <?php

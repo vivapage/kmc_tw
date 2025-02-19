@@ -8,6 +8,37 @@
  */
 
 ?>
+<?php
+			$counter = 0;
+				$terms = get_the_terms( $post->ID , 'service_category' );
+				foreach ( $terms as $term ) {
+
+						$cat = $term->name;
+						$catlink = get_term_link( $term );
+
+						$counter++;
+					if ( $counter === 1 ) {
+						$catlink2 = get_term_link( $term );
+				$cat1 = $term->name;
+				$catslug = $term->slug;
+
+
+				}
+			}
+
+			?>
+<?php
+			if ($catslug == "dentistry"){
+				$spec = 'stomatologiya';
+			} elseif ($catslug == "cosmetology") {
+				$spec = 'kosmetologiya';
+			} elseif ($catslug == "massage") {
+				$spec = 'masazh';
+			} elseif ($catslug == "psychotherapiya") {
+				$spec = 'psyhoterapiya';
+			}
+
+			?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('prose prose-_tw'); ?>>
     <header class="entry-header container max-w-content mx-auto max-sm:px-4 relative">
@@ -59,6 +90,7 @@ else {
 			)
 		);
 		?>
+
             <h2 class="mt-8 pt-8 border-t border-gray-200">Ціни</h2>
             <?php
     global $post;
@@ -69,36 +101,80 @@ priceList($post_slug)
                 <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button"
                         href="/prices/">Всі ціни</a></div>
             </div>
+            <h2 class="mt-8 pt-8 border-t border-gray-200">Наші фахівці</h2>
+            <div class="container max-w-210 mx-auto px-4">
+                <div x-data="carousel()" x-init="init()" class="relative overflow-hidden group">
+                    <div x-ref="container"
+                        class="md:flex md:overflow-x-scroll scroll-snap-x md:space-x-4 space-y-4 md:space-y-0 no-scrollbar">
+                        <?php
+					// WP_Query arguments
+						$args = array(
+							'post_type'              => array( 'specialist' ),
+							'post_status'            => array( 'publish' ),
+
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'specialist-category',
+									'field'    => 'slug',
+									'terms'    => $spec
+								)
+							),
+
+						);
+
+						// The Query
+						$query = new WP_Query( $args );
+
+						if ( $query->have_posts() ) {
+							while ( $query->have_posts() ) {
+								$query->the_post();
+						?>
+                        <div
+                            class="ml-1 flex-auto grow-0 shrink-0 w-46 max-sm:w-96 justify-center snap-center overflow-hidden shadow-md">
+
+                            <div class="px-2 py-3 flex flex-col text-center">
+                                <div><?php if ( has_post_thumbnail() ) { ?>
+                                    <figure class="!mb-4 !mt-0">
+                                        <?php echo get_the_post_thumbnail(); ?>
+                                    </figure>
+                                    <?php } ?>
+                                </div>
+                                <div class="text-lg font-semibold"><?php the_title(); ?></div>
+                                <div class="text-sm my-2"><?php if ( get_field('specialty') ) :
+                                echo get_field('specialty');
+                                endif; ?>
+                                </div>
+                                <div class="mt-2">
+                                    <a class="font-semibold" href="<?php the_permalink();?>">Докладніше</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+	}
+}
+else {
+	// Постов не найдено
+}
+?>
+                    </div>
+                    <div @click="scrollTo(prev)" x-show="prev !== null"
+                        class="hidden md:block absolute top-1/2 left-0 bg-orange-block p-2 transition-transform ease-in-out transform -translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
+                        <div class="text-white text-2xl font-bold">&lt;</div>
+                    </div>
+                    <div @click="scrollTo(next)" x-show="next !== null"
+                        class="hidden md:block absolute top-1/2 right-0 bg-orange-block p-2 transition-transform ease-in-out transform translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
+                        <div class="text-white text-2xl font-bold">&gt;</div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div class="max-sm:basis-full basis-1/4 mx-auto">
-            <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
             <div class="wp-block-buttons mt-4 mb-6">
-                <!-- wp:button {"textAlign":"center"} -->
                 <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button"
                         href="/zapysatysya-na-pryjom/">Записатися на прийом</a></div>
-                <!-- /wp:button -->
             </div>
-            <!-- /wp:buttons -->
 
-
-            <?php
-			$counter = 0;
-				$terms = get_the_terms( $post->ID , 'service_category' );
-				foreach ( $terms as $term ) {
-
-						$cat = $term->name;
-						$catlink = get_term_link( $term );
-
-						$counter++;
-					if ( $counter === 1 ) {
-						$catlink2 = get_term_link( $term );
-				$cat1 = $term->name;
-
-
-				}
-			}
-			?>
             <div class="border-t border-gray-300">
                 <a href="<?php echo $catlink2 ?>">
                     <h2><?php echo $cat1 ?> </h2>
@@ -134,10 +210,6 @@ priceList($post_slug)
 							wp_reset_postdata();
 						}
 				?>
-
-
-
-
         </div>
     </div>
 
