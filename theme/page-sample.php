@@ -16,99 +16,44 @@ get_header();
 
 
 <section id="primary">
-    <main id="main">
+    <main id="main" <?php post_class('entry-content prose prose-_tw'); ?>>
+        <div class="conteiner max-w-content mx-auto">
+            <div x-data="{ 'showModal': false }" @keydown.escape="showModal = false">
+                <!-- Trigger for Modal -->
+                <button type="button" @click="showModal = true"
+                    class="wp-block-button wp-block-button__link has-text-align-center wp-element-button">Записатися на
+                    прийом</button>
 
-        <?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+                <!-- Modal -->
+                <div class="fixed inset-0 z-30 flex items-center justify-center overflow-auto bg-black/20 backdrop-blur-md"
+                    x-show="showModal">
+                    <!-- Modal inner -->
+                    <div class="md:min-w-130 max-sm:w-80 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg"
+                        @click.away="showModal = false" x-transition:enter="motion-safe:ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
+                        <!-- Title / Close-->
+                        <div class="flex items-center justify-between">
+                            <h3 class="mr-3 text-black max-w-none">Записатися на прийом </h3>
 
-				get_template_part( 'template-parts/content/content', 'page' );
-
-				// If comments are open, or we have at least one comment, load
-				// the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
-
-			endwhile; // End of the loop.
-
-
-?>
-        <div class="container max-w-content mt-12 flex mx-auto items-center prose prose-_tw">
-
-            <div x-data="carousel()" x-init="init()" class="relative overflow-hidden group">
-                <div x-ref="container"
-                    class="md:flex md:overflow-x-scroll scroll-snap-x md:space-x-4 space-y-4 md:space-y-0 no-scrollbar">
-                    <?php
-					// WP_Query arguments
-$args = array(
-	'post_type'              => array( 'specialist' ),
-	'post_status'            => array( 'publish' ),
-	/*
-	'tax_query' => array(
-		array(
-			'taxonomy' => 'specialist-category',
-			'field'    => 'slug',
-			'terms'    => 'stomatologiya'
-		)
-	),
-	*/
-);
-
-// The Query
-$query = new WP_Query( $args );
-
-if ( $query->have_posts() ) {
-	while ( $query->have_posts() ) {
-		$query->the_post();
-		?>
-                    <div
-                        class="ml-2 flex-auto grow-0 shrink-0 w-67 max-sm:w-96 justify-center snap-center overflow-hidden shadow-md">
-
-                        <div class="px-2 py-3 flex flex-col text-center">
-                            <div><?php if ( has_post_thumbnail() ) { ?>
-                                <figure class="!mb-4 !mt-0">
-                                    <?php echo get_the_post_thumbnail(); ?>
-                                </figure>
-                                <?php } ?>
-                            </div>
-                            <div class="text-lg font-semibold"><?php the_title(); ?></div>
-                            <div class="text-sm my-2"><?php if ( get_field('specialty') ) :
-                                echo get_field('specialty');
-                                endif; ?>
-                            </div>
-                            <div class="mt-2">
-                                <a class="font-semibold" href="<?phpthe_permalink();?>">Докладніше</a>
-                            </div>
+                            <button type="button" class="z-50 cursor-pointer" @click="showModal = false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
                         </div>
+
+                        <!-- content -->
+                        <div><?php echo do_shortcode( '[wpforms id="1620" title="false"]' );?></div>
                     </div>
-                    <?php
-	}
-}
-else {
-	// Постов не найдено
-}
-?>
-                </div>
-                <div @click="scrollTo(prev)" x-show="prev !== null"
-                    class="hidden md:block absolute top-1/2 left-0 bg-orange-block p-2 transition-transform ease-in-out transform -translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
-                    <div class="text-white text-2xl font-bold">&lt;</div>
-                </div>
-                <div @click="scrollTo(next)" x-show="next !== null"
-                    class="hidden md:block absolute top-1/2 right-0 bg-orange-block p-2 transition-transform ease-in-out transform translate-x-full -translate-y-1/2 group-hover:translate-x-0 cursor-pointer">
-                    <div class="text-white text-2xl font-bold">&gt;</div>
                 </div>
             </div>
-        </div>
-
-        <?php
-// Возвращаем оригинальные данные поста. Сбрасываем $post.
-wp_reset_postdata();
-?>
         </div>
     </main><!-- #main -->
 </section><!-- #primary -->
 
 <?php
+
+
 get_footer();

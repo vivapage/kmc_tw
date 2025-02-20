@@ -21,6 +21,9 @@ body {
 a.wp-block-button__link, a:hover.wp-block-button__link {
 	@apply text-white;
 }
+.wp-block-button__link {
+	@apply rounded-full
+}
 .rank-math-breadcrumb p {
 	@apply mb-0;
 }
@@ -111,4 +114,10 @@ a.wp-block-button__link, a:hover.wp-block-button__link {
 .no-scrollbar {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+
+.wpforms-form input[type=submit],
+.wpforms-form button[type=submit] {
+	@apply !bg-orange-block !rounded-full block m-auto;
 }
