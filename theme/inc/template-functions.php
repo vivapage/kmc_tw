@@ -226,7 +226,7 @@ function priceList($cat) {
 );
 
 	$query = new WP_Query( $args );
-  echo '<figure class="wp-block-table is-style-stripes"><table><tbody>';
+  echo '<div class="wp-block-table is-style-stripes"><table><tbody>';
 if ( $query->have_posts() ) :
   while ( $query->have_posts() ) : $query->the_post();
 	$custom_field = get_field( 'posluga');
@@ -242,6 +242,38 @@ if ( $query->have_posts() ) :
 	endif;
   endwhile;
 endif;
-echo'</tbody></table></figure>';
+echo'</tbody></table></div>';
 wp_reset_query( $query );
+}
+
+
+function price_list($id) {
+	$args = array(
+  		'post_type' => 'prices',
+		'posts_per_page' => -1,
+		'orderby'   => 'menu_order',
+        'order'     => 'DESC',
+		'meta_query' => array(
+
+        array (
+            'key' => 'posluga',
+            'compare' => 'LIKE',
+            'value' => '"' . $id . '"',
+        ))
+);
+	$query = new WP_Query( $args );
+  echo '<div class="wp-block-table is-style-stripes"><table><tbody>';
+if ( $query->have_posts() ) :
+  while ( $query->have_posts() ) : $query->the_post();
+
+		echo '<tr><td>';
+		echo the_title();
+		echo '</td>';
+		echo '<td>';
+		echo get_field('cost');
+		echo ' грн.</td></tr>';
+  endwhile;
+endif;
+echo'</tbody></table></div>';
+        wp_reset_query( $query );
 }

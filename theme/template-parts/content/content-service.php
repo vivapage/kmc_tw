@@ -94,8 +94,9 @@ else {
             <h2 class="mt-8 pt-8 border-t border-gray-200">Ціни</h2>
             <?php
     global $post;
-    $post_slug = $post->post_name;
-priceList($post_slug)
+    $post_id = $post->ID;
+price_list($post_id)
+//echo $post_id;
             ?>
             <div class="wp-block-buttons mt-4 mb-6 text-center">
                 <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button"
