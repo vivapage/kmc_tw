@@ -108,7 +108,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('systemni-rozstanovky-po-helingery')?>
+                    <?php price_list('318')?>
                 </div>
             </div>
         </div>
