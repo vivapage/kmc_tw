@@ -40,3 +40,4 @@
 	 --color-orange-hover: #eb7f53;
 	 --color-orange-block: #ff966b;
 }
+[x-cloak] { display: none; }

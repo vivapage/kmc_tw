@@ -40,7 +40,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('konsultacziya-psyhologa')?>
+                    <?php price_list('316')?>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('onlajn-konsultacziya-psuxologa')?>
+                    <?php price_list('317')?>
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('kouchyng')?>
+                    <?php price_list('319')?>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('kajten-sesiyi')?>
+                    <?php price_list('320')?>
                 </div>
             </div>
         </div>
@@ -210,7 +210,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('holodynamika')?>
+                    <?php price_list('321')?>
                 </div>
             </div>
         </div>
@@ -244,7 +244,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('karmichnyj-menedzhment')?>
+                    <?php price_list('322')?>
                 </div>
             </div>
         </div>
@@ -278,7 +278,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('transformacziya-osobystosti')?>
+                    <?php price_list('2103')?>
                 </div>
             </div>
         </div>

@@ -62,7 +62,7 @@
                 </div>
                 <!-- Content-Масаж комірцевої зони та голови -->
                 <div x-show="expanded == 1" class="flex justify-center m-10">
-                    <?php priceList('masazh-komirczevoyi-zony-golovy')?>
+                    <?php price_list('350')?>
                 </div>
 
                 <!-- Accordion Масаж кінцівок -->
@@ -84,7 +84,7 @@
                 </div>
                 <!-- Content-Масаж кінцівок -->
                 <div x-show="expanded == 2" class="flex justify-center m-10">
-                    <?php priceList('masazh-kinczivok')?>
+                    <?php price_list('351')?>
                 </div>
 
                 <!-- Accordion Масаж спини -->
@@ -106,7 +106,7 @@
                 </div>
                 <!-- Content-Масаж спини -->
                 <div x-show="expanded == 3" class="flex justify-center m-10">
-                    <?php priceList('masazh-spyny')?>
+                    <?php price_list('352')?>
                 </div>
 
                 <!-- Accordion Масаж тіла -->
@@ -128,7 +128,7 @@
                 </div>
                 <!-- Content-Масаж тіла -->
                 <div x-show="expanded == 4" class="flex justify-center m-10">
-                    <?php priceList('masazh-tila')?>
+                    <?php price_list('353')?>
                 </div>
 
                 <!-- Accordion Масаж для дітей -->
@@ -150,7 +150,7 @@
                 </div>
                 <!-- Content-Масаж для дітей -->
                 <div x-show="expanded == 5" class="flex justify-center m-10">
-                    <?php priceList('masazh-dlya-ditej')?>
+                    <?php price_list('354')?>
                 </div>
             </div>
         </div>
@@ -203,7 +203,7 @@
                 </div>
                 <!-- Content-Консультація -->
                 <div x-show="expanded == 1" class="flex justify-center m-10">
-                    <?php priceList('konsultacziya-2')?>
+                    <?php price_list('355')?>
                 </div>
 
                 <!-- Accordion Фізична реабілітація -->
@@ -226,7 +226,7 @@
                 </div>
                 <!-- Content-Фізична реабілітація -->
                 <div x-show="expanded == 2" class="flex justify-center m-10">
-                    <?php priceList('/service/fizychna-reabilitacziya/')?>
+                    <?php price_list('356')?>
                 </div>
 
                 <!-- Accordion Вертебрологія -->
@@ -248,7 +248,7 @@
                 </div>
                 <!-- Content-Вертебрологія -->
                 <div x-show="expanded == 3" class="flex justify-center m-10">
-                    <?php priceList('vertebrologiya')?>
+                    <?php price_list('357')?>
                 </div>
 
                 <!-- Accordion Кінезіотерапія -->
@@ -270,7 +270,7 @@
                 </div>
                 <!-- Content-Кінезіотерапія -->
                 <div x-show="expanded == 4" class="flex justify-center m-10">
-                    <?php priceList('kinezioterapiya')?>
+                    <?php price_list('358')?>
                 </div>
 
                 <!-- Accordion Остеопатія -->
@@ -292,7 +292,7 @@
                 </div>
                 <!-- Content-Остеопатія -->
                 <div x-show="expanded == 5" class="flex justify-center m-10">
-                    <?php priceList('osteopatiya')?>
+                    <?php price_list('359')?>
                 </div>
             </div>
         </div>
@@ -326,7 +326,7 @@
 
             <div x-data="{ expanded: null }">
                 <div class="flex justify-center m-10">
-                    <?php priceList('fejsbildyng')?>
+                    <?php price_list('360')?>
                 </div>
             </div>
         </div>
@@ -379,7 +379,7 @@
                 </div>
                 <!-- Content-Оздоровчий масаж -->
                 <div x-show="expanded == 1" class="flex justify-center m-10">
-                    <?php priceList('ozdorovchyj-masazh')?>
+                    <?php price_list('361')?>
                 </div>
 
                 <!-- Accordion Лімфодренажний масаж -->
@@ -402,7 +402,7 @@
                 </div>
                 <!-- Content-Лімфодренажний масаж -->
                 <div x-show="expanded == 2" class="flex justify-center m-10">
-                    <?php priceList('limfodrenazhnyj-masazh')?>
+                    <?php price_list('362')?>
                 </div>
 
                 <!-- Accordion Енергетичний масаж -->
@@ -425,7 +425,7 @@
                 </div>
                 <!-- Content-Енергетичний масаж -->
                 <div x-show="expanded == 3" class="flex justify-center m-10">
-                    <?php priceList('energetychnyj-masazh')?>
+                    <?php price_list('363')?>
                 </div>
             </div>
         </div>
@@ -478,7 +478,7 @@
                 </div>
                 <!-- Content-Релаксуючі масажі -->
                 <div x-show="expanded == 1" class="flex justify-center m-10">
-                    <?php priceList('relaksuyuchi-masazhi')?>
+                    <?php price_list('364')?>
                 </div>
 
                 <!-- Accordion Ексклюзивні масажі -->
@@ -501,7 +501,7 @@
                 </div>
                 <!-- Content-Ексклюзивні масажі -->
                 <div x-show="expanded == 2" class="flex justify-center m-10">
-                    <?php priceList('eksklyuzyvni-masazhi')?>
+                    <?php price_list('365')?>
                 </div>
 
                 <!-- Accordion Ексклюзивні масажі для чоловіків -->
@@ -524,7 +524,7 @@
                 </div>
                 <!-- Content-Ексклюзивні масажі для чоловіків -->
                 <div x-show="expanded == 3" class="flex justify-center m-10">
-                    <?php priceList('eksklyuzyvni-masazhi-dlya-cholovikiv')?>
+                    <?php price_list('366')?>
                 </div>
 
                 <!-- Accordion Ексклюзивні масажі для двох -->
@@ -547,7 +547,7 @@
                 </div>
                 <!-- Content-Ексклюзивні масажі для двох -->
                 <div x-show="expanded == 4" class="flex justify-center m-10">
-                    <?php priceList('eksklyuzyvni-masazhi-dlya-dvoh')?>
+                    <?php price_list('367')?>
                 </div>
             </div>
         </div>
@@ -601,7 +601,7 @@
                 </div>
                 <!-- Content-Антицелюлітний масаж -->
                 <div x-show="expanded == 1" class="flex justify-center m-10">
-                    <?php priceList('antyczelyulitnyj-masazh')?>
+                    <?php price_list('368')?>
                 </div>
 
                 <!-- Accordion Антицелюлітне обгортання -->
@@ -624,7 +624,7 @@
                 </div>
                 <!-- Content-Антицелюлітне обгортання -->
                 <div x-show="expanded == 2" class="flex justify-center m-10">
-                    <?php priceList('antyczelyulitne-obgortannya')?>
+                    <?php price_list('369')?>
                 </div>
             </div>
         </div>
@@ -677,7 +677,7 @@
                 </div>
                 <!-- Content-Аромамасаж -->
                 <div x-show="expanded == 1" class="flex justify-center m-10">
-                    <?php priceList('aromamasazh')?>
+                    <?php price_list('370')?>
                 </div>
 
                 <!-- Accordion Spa для тіла -->
@@ -699,7 +699,7 @@
                 </div>
                 <!-- Content-Spa для тіла -->
                 <div x-show="expanded == 2" class="flex justify-center m-10">
-                    <?php priceList('spa-dlya-tila')?>
+                    <?php price_list('371')?>
                 </div>
 
                 <!-- Accordion SPA-обгортання -->
@@ -721,7 +721,7 @@
                 </div>
                 <!-- Content-SPA-обгортання -->
                 <div x-show="expanded == 3" class="flex justify-center m-10">
-                    <?php priceList('spa-obgortannya')?>
+                    <?php price_list('2061')?>
                 </div>
             </div>
         </div>

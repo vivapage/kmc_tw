@@ -172,7 +172,7 @@ else {
         </div>
         <div class="max-sm:basis-full basis-1/4 mx-auto">
             <div class="wp-block-buttons mt-4 mb-6">
-                <div x-data="{ 'showModal': false }" @keydown.escape="showModal = false">
+                <div x-data="{ 'showModal': false }" @keydown.escape="showModal = false" x-cloak>
                     <!-- Trigger for Modal -->
                     <button type="button" @click="showModal = true"
                         class="wp-block-button wp-block-button__link has-text-align-center wp-element-button">Записатися

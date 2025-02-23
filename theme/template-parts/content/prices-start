@@ -51,7 +51,7 @@
                 </div>
                 <!-- Content-Item1 1 -->
                 <div x-show="expanded == 1" x-collapse class="flex justify-center m-10">
-                    <?php priceList('name-item1')?>
+                    <?php price_list('id')?>
                 </div>
 
                 <!-- Accordion item2 -->
@@ -73,7 +73,7 @@
                 </div>
                 <!-- Content-Item2 -->
                 <div x-show="expanded == 2" x-collapse class="flex justify-center m-10">
-                    <?php priceList('name-item2')?>
+                    <?php price_list('name-item2')?>
                 </div>
 
                 <!-- Accordion item3 -->
@@ -95,7 +95,7 @@
                 </div>
                 <!-- Content-Item3 -->
                 <div x-show="expanded == 3" x-collapse class="flex justify-center m-10">
-                    <?php priceList('name-item3')?>
+                    <?php price_list('name-item3')?>
                 </div>
 
                 <!-- Accordion item4 -->
@@ -117,7 +117,7 @@
                 </div>
                 <!-- Content-Item4 -->
                 <div x-show="expanded == 4" x-collapse class="flex justify-center m-10">
-                    <?php priceList('name-item4')?>
+                    <?php price_list('name-item4')?>
                 </div>
 
                 <!-- Accordion item5 -->
@@ -139,7 +139,7 @@
                 </div>
                 <!-- Content-Item5 -->
                 <div x-show="expanded == 5" x-collapse class="flex justify-center m-10">
-                    <?php priceList('name-item5')?>
+                    <?php price_list('name-item5')?>
                 </div>
 
                 <!-- Accordion item6 -->
@@ -161,7 +161,7 @@
                 </div>
                 <!-- Content-Item6 -->
                 <div x-show="expanded == 6" x-collapse class="flex justify-center m-10">
-                    <?php priceList('name-item6')?>
+                    <?php price_list('name-item6')?>
                 </div>
             </div>
 		</div>
