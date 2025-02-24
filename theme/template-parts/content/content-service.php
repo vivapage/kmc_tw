@@ -15,30 +15,33 @@
 
 						$cat = $term->name;
 						$catlink = get_term_link( $term );
+						$catslug0 = $term->slug;
 
 						$counter++;
 					if ( $counter === 1 ) {
 						$catlink2 = get_term_link( $term );
-				$cat1 = $term->name;
-				$catslug = $term->slug;
-
-
+						$cat1 = $term->name;
+						$catslug = $term->slug;
 				}
 			}
 
 			?>
 <?php
-			if ($catslug == "dentistry"){
+			if ($catslug == "dentistry" or $catslug0 == "dentistry"){
 				$spec = 'stomatologiya';
-			} elseif ($catslug == "cosmetology") {
+				$specid = '0';
+			} elseif ($catslug == "cosmetology" or $catslug0 == "cosmetology") {
 				$spec = 'kosmetologiya';
-			} elseif ($catslug == "massage") {
+				$specid = '1';
+			} elseif ($catslug == "massage" or $catslug0 == "massage") {
 				$spec = 'masazh';
-			} elseif ($catslug == "psychotherapiya") {
+				$specid = '2';
+			} elseif ($catslug == "psychotherapiya" or $catslug0 == "psychotherapiya") {
 				$spec = 'psyhoterapiya';
+				$specid = '3';
 			}
-
 			?>
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('prose prose-_tw'); ?>>
     <header class="entry-header container max-w-content mx-auto max-sm:px-4 relative">
@@ -100,7 +103,7 @@ price_list($post_id)
             ?>
             <div class="wp-block-buttons mt-4 mb-6 text-center">
                 <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button"
-                        href="/prices/">Всі ціни</a></div>
+                        href="/prices?servid=<?php echo $specid; ?>">Всі ціни</a></div>
             </div>
             <h2 class="mt-8 pt-8 border-t border-gray-200">Наші фахівці</h2>
             <div class="container max-w-210 mx-auto px-4">

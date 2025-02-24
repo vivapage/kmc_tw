@@ -19,9 +19,16 @@ get_header();
         <header class="entry-header container max-w-content mx-auto max-sm:px-4 relative">
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </header>
+        <?php
+		$id = $_GET["servid"];
+		if (empty ($id)){
+			$id = 0;
+		}
+
+		?>
         <div class="page-content">
 
-            <div class="tab-wrapper" x-data="{ activeTab:  0 }">
+            <div class="tab-wrapper" x-data="{ activeTab:  <?php echo $id; ?>  }">
                 <div class="flex justify-between border-b border-gray-200 pb-2 mb-2 max-sm:flex-col">
                     <label @click="activeTab = 0" class="tab-control"
                         :class="{ 'active': activeTab === 0 }">Стоматологія</label>

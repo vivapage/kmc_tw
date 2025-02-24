@@ -49,7 +49,7 @@ a.wp-block-button__link, a:hover.wp-block-button__link {
 	@apply text-primary text-xl;
 }
 .tab-control.active {
-	@apply text-green-block font-semibold;
+	@apply text-green-block font-semibold text-2xl;
 }
 
 .tab-control:first-child {
