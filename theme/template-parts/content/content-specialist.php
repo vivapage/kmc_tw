@@ -159,7 +159,33 @@
             <?php
 				if ( get_field('video')): ?>
             <span class="font-bold">Відео:&nbsp;</span>
-            <?php the_field('video'); ?>
+            <div class="flex justify-center">
+                <?php the_field('video'); ?>
+            </div>
+            <?php
+				endif;
+				?>
+        </div>
+        <div>
+
+            <?php
+				if ( get_field('video_2')): ?>
+            <hr>
+            <div class="flex justify-center">
+                <?php the_field('video_2'); ?>
+            </div>
+            <?php
+				endif;
+				?>
+        </div>
+        <div>
+
+            <?php
+				if ( get_field('video_3')): ?>
+            <hr>
+            <div class="flex justify-center">
+                <?php the_field('video_3'); ?>
+            </div>
             <?php
 				endif;
 				?>
