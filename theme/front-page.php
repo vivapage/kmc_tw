@@ -99,7 +99,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <h1 class="text-center pt-8 mt-8 border-t border-gray-200">НАШІ ФАХІВЦІ</h1>
+            <h1 class="text-center pt-8 mt-8 border-t border-gray-400">НАШІ ФАХІВЦІ</h1>
             <div class="container max-w-content mx-auto px-4">
                 <div x-data="carousel()" x-init="init()" class="relative overflow-hidden group">
                     <div x-ref="container"
@@ -165,6 +165,36 @@ else {
                     </div>
                 </div>
             </div>
+            <h1 class="text-center pt-8 mt-8 border-t border-gray-400">ВІДГУКИ</h1>
+            <div class="flex max-md:flex-col flex-row justify-between max-sm:mx-4">
+                <div class="flex basis-1/4 m-2 p-2 max-md:border-0 border-r border-gray-200">
+                    <?php
+		   echo do_shortcode( '[site_reviews display=1 hide="title"]' );
+		   ?>
+                </div>
+                <div class="flex basis-1/4 m-2 p-2 max-md:border-0 border-r border-gray-200">
+                    <?php
+		   echo do_shortcode( '[site_reviews display=1 offset=1 hide="title"]' );
+		   ?>
+
+                </div>
+                <div class="flex basis-1/4 m-2 p-2 max-md:border-0 border-r border-gray-200">
+                    <?php
+		   echo do_shortcode( '[site_reviews display=1 offset=2 hide="title"]' );
+		   ?>
+                </div>
+                <div class="flex basis-1/4 m-2 p-2 h-90 overflow-hidden hover:overflow-y-auto">
+                    <?php
+		   echo do_shortcode( '[site_reviews display=1 offset=3 hide="title"]' );
+		   ?>
+                </div>
+            </div>
+            <div class="flex justify-center mt-10">
+                <a href="/reviews"><button type="button"
+                        class="wp-block-button wp-block-button__link has-text-align-center wp-element-button">Всі
+                        відгуки</button></a>
+
+            </div>
 
         </div>
 
@@ -173,6 +203,7 @@ else {
 
 
 <?php
+
 
 
 
